@@ -1,0 +1,9 @@
+PRO_far_son_mine_industry_final = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_pickaxe
+	local_intel_to_enemies = -0.5
+	industry_air_damage_factor = 0.5
+	local_supplies = 0.1
+	local_building_slots = 15
+	production_speed_buildings_factor = 0.2
+}

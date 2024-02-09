@@ -1,0 +1,61 @@
+characters = {
+	PRO_mole_boss = {
+		name = PRO_mole_boss_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_PRO_leader
+			}
+			army = {
+				large = GFX_Portrait_PRO_leader
+			}
+		}
+		country_leader = {
+			desc = PRO_mole_king_desc
+			ideology = warlordship
+			traits = {
+				pro_morghol_generic
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+	}
+	PRO_far_son = {
+		name = PRO_far_son_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Moleminer_Generic_6
+			}
+		}
+		corps_commander = {
+			traits = {
+				intelligent_trait
+				sniper
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	PRO_hurrmgh = {
+		name = "Prospector Hurrmgh"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_pro_general
+			}
+		}
+		corps_commander = {
+			traits = {
+				enduring_trait
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+}

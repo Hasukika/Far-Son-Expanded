@@ -1,0 +1,3312 @@
+###############################################################################
+###				Wyoming Focus Tree											###
+###			by Team FlowerPower: Violet (´ε｀ )♡, Lusa, Twit, & Aider		###
+###		"The Enclave Has Made Me Mad Enough To Make A Mole Miner Tree"		###
+###############################################################################
+
+###Fun fact: the reason we have Mole Miner sounds at all was just because Twit learned about Mole Miners and fell in love with them in 24 hours.
+###As neither of us owned FO76 on PC, you can thank Flubbins for giving us the sound files we needed! The man reinstalled the game just for us :heart:
+###Every single event in this tree was written by Aider.
+###This tree was made and completed in four days: Twit doing technical work for the Mole Miners and GFX work, Aider writing every single event, etc.
+###Originally, in 4.0, this tree only included Highland Watch and Far Son. In 5.0, this tree will include the Baron's Eyrie.
+
+focus_tree = {
+	id = wyoming_nf
+	country = {
+		base = 0
+		modifier = {
+			OR = {
+				original_tag = PRO
+				original_tag = SIE
+			}
+			add = 50
+		}
+	}
+	default = no
+
+	focus = {
+		id = wyoming_1
+		icon = GFX_goal_generic_state_wyoming_2
+		cost = 7
+		x = 16
+		y = 0
+		completion_reward = {
+			country_event = {
+				id = nf_wyoming.1
+			}
+		}
+	}
+	focus = {
+		id = wyoming_2
+		icon = GFX_goal_sln_pickaxe #MCA_Bad_Canada_Miner
+		cost = 7
+		prerequisite = {
+			focus = wyoming_1
+		}
+		relative_position_id = wyoming_1
+		x = 0
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = PRO
+				}
+				country_event = {
+					id = nf_pro.1
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = SIE
+				}
+				country_event = {
+					id = nf_sie.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = wyoming_3
+		icon = GFX_goal_generic_smoking_cowboy
+		cost = 7
+		prerequisite = {
+			focus = wyoming_2
+		}
+		relative_position_id = wyoming_2
+		x = 0
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = PRO
+				}
+				country_event = {
+					id = nf_pro.2
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = SIE
+				}
+				country_event = {
+					id = nf_sie.2
+				}
+			}
+		}
+	}
+
+	#################
+	### Left Side ###
+	#################
+	###    MOLE   ###
+	#################
+	
+	focus = {
+		id = wyoming_mole_left_opener
+		icon = GFX_goal_MCA_Freedom_Industry_Miner
+		cost = 60
+		allow_branch = {
+			original_tag = PRO
+		}
+		prerequisite = {
+			focus = wyoming_3
+		}
+		relative_position_id = wyoming_3
+		x = -8
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 1
+				category = industry
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_2
+		icon = GFX_goal_PLS_Metal_Scrap
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_left_opener
+		}
+		relative_position_id = wyoming_mole_left_opener
+		x = -2
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_3
+		icon = GFX_goal_generic_supplies_focus
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_2
+		}
+		relative_position_id = wyoming_mole_2
+		x = -2
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 250
+			}
+			add_caps = yes
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_manpower
+		icon = GFX_goal_WBH_black_paladins
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_2
+		}
+		prerequisite = {
+			focus = wyoming_mole_water
+		}
+		relative_position_id = wyoming_mole_2
+		x = 0
+		y = 1
+		completion_reward = {
+			add_manpower = 3500
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_manpower_dos
+		icon = GFX_goal_CHC_build_the_amplifier
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_3
+		}
+		prerequisite = {
+			focus = wyoming_mole_manpower
+		}
+		relative_position_id = wyoming_mole_3
+		x = 1
+		y = 1
+		completion_reward = {
+			add_manpower = 500
+			1033 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_water
+		icon = GFX_goal_generic_dam
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_left_opener
+		}
+		relative_position_id = wyoming_mole_left_opener
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = water
+					amount = 15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_factory_1
+		icon = GFX_goal_propaganda_capitalist_1
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_water
+		}
+		relative_position_id = wyoming_mole_water
+		x = 0
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+
+	focus = {
+		id = wyoming_mole_plant
+		icon = GFX_goal_CES_Industry_Miner
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_factory_1
+		}
+		relative_position_id = wyoming_mole_factory_1
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				ahead_reduction = 1
+				uses = 1
+				category = extraction_category
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = tool_tech
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						is_valid_state_for_civilian_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_escape
+		icon = GFX_goal_generic_wheel_barrow
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_left_opener
+		}
+		relative_position_id = wyoming_mole_left_opener
+		x = 2
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = metal
+					amount = 5
+				}
+				add_resource = {
+					type = circuitry
+					amount = 3
+				}
+			}
+			add_ideas = wyoming_resources
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_power
+		icon = GFX_goal_generic_skid_loader
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_escape
+		}
+		prerequisite = {
+			focus = wyoming_mole_water
+		}
+		relative_position_id = wyoming_mole_escape
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = energy
+					amount = 8
+				}
+				if = {
+					limit = {
+						is_valid_state_for_civilian_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_tools
+		icon = GFX_goal_generic_tinker_workbench
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_escape
+		}
+		relative_position_id = wyoming_mole_escape
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = tool_tech
+			}
+			random_owned_state = {
+				add_resource = {
+					type = metal
+					amount = 6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_comp
+		icon = GFX_goal_generic_megaloader
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_tools
+		}
+		prerequisite = {
+			focus = wyoming_mole_power
+		}
+		relative_position_id = wyoming_mole_escape
+		x = 1
+		y = 2
+		completion_reward = {
+			add_war_support = 0.075
+			every_owned_state = {
+				limit = {
+					state = 1033
+					state = 1036
+					state = 1034
+				}
+				add_extra_state_shared_building_slots = 2
+			}		
+		}
+	}
+
+	focus = {
+		id = wyoming_mole_research
+		icon = GFX_goal_TLA_Zap_miner
+		cost = 60
+		prerequisite = {
+			focus = wyoming_mole_plant
+		}
+		prerequisite = {
+			focus = wyoming_mole_comp
+		}
+		prerequisite = {
+			focus = wyoming_mole_manpower_dos
+		}
+		available = {
+			has_completed_focus = pro_the_wyoming_heirs_2
+		}
+		relative_position_id = wyoming_mole_plant
+		x = 0
+		y = 1
+		completion_reward = {
+			add_country_leader_trait = pro_morghol_gaming 
+			effect_tooltip = {
+				custom_effect_tooltip = PRO_every_owned_state_tt
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+			}
+			hidden_effect = {
+			every_owned_state = {
+				if = {
+					limit = {
+						is_core_of = PRO
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+						}
+					}
+				}
+			}
+			#swap_ideas = {
+			#	remove_idea = wyoming_resources
+			#	add_idea = wyoming_resources_upgrade
+			#}
+		}
+	}
+	
+	################
+	###	NON MOLE ###
+	################
+	
+	focus = {
+		id = wyoming_left_opener
+		icon = GFX_goal_generic_ideological_fury_focus
+		cost = 60
+		allow_branch = {
+			OR = {
+				#original_tag = PRO
+				original_tag = SIE
+			}
+		}
+		prerequisite = {
+			focus = wyoming_3
+		}
+		relative_position_id = wyoming_3
+		x = -8
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 1
+				category = industry
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_caps_1
+		icon = GFX_goal_generic_nuka
+		cost = 60
+		prerequisite = {
+			focus = wyoming_left_opener
+		}
+		relative_position_id = wyoming_left_opener
+		x = -2
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 50
+			}
+			add_caps = yes
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = wyoming_caps_2
+		icon = GFX_goal_generic_brahmin_trade
+		cost = 60
+		prerequisite = {
+			focus = wyoming_caps_1
+		}
+		relative_position_id = wyoming_caps_1
+		x = -2
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 250
+			}
+			add_caps = yes
+		}
+	}
+
+	focus = {
+		id = wyoming_manpower
+		icon = GFX_goal_generic_barn
+		cost = 60
+		prerequisite = {
+			focus = wyoming_caps_1
+		}
+		prerequisite = {
+			focus = wyoming_waterways
+		}
+		relative_position_id = wyoming_caps_1
+		x = 0
+		y = 1
+		completion_reward = {
+			add_manpower = 2000
+		}
+	}
+
+	focus = {
+		id = wyoming_manpower_dos
+		icon = GFX_goal_generic_cities_focus
+		cost = 60
+		prerequisite = {
+			focus = wyoming_caps_2
+		}
+		prerequisite = {
+			focus = wyoming_manpower
+		}
+		relative_position_id = wyoming_caps_2
+		x = 1
+		y = 1
+		completion_reward = {
+			add_manpower = 2000
+		}
+	}
+
+	focus = {
+		id = wyoming_waterways
+		icon = GFX_goal_generic_dam
+		cost = 60
+		prerequisite = {
+			focus = wyoming_left_opener
+		}
+		relative_position_id = wyoming_left_opener
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = water
+					amount = 12
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_factory_1
+		icon = GFX_goal_usa_construct_mil_factory
+		cost = 60
+		prerequisite = {
+			focus = wyoming_waterways
+		}
+		relative_position_id = wyoming_left_opener
+		x = 0
+		y = 2
+		completion_reward = {
+			random_owned_state = {
+				if = {
+					limit = {
+						is_valid_state_for_2_civilian_factories = yes
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = wyoming_plants
+		icon = GFX_goal_generic_creature_bald_eagle
+		cost = 60
+		prerequisite = {
+			focus = wyoming_factory_1
+		}
+		relative_position_id = wyoming_factory_1
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = agriculture_tech
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						is_valid_state_for_civilian_factory = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_escapes
+		icon = GFX_goal_usa_education
+		cost = 60
+		prerequisite = {
+			focus = wyoming_left_opener
+		}
+		relative_position_id = wyoming_left_opener
+		x = 2
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = metal
+					amount = 5
+				}
+				add_resource = {
+					type = circuitry
+					amount = 3
+				}
+			}
+			add_ideas = wyoming_resources
+		}
+	}
+
+	focus = {
+		id = wyoming_power
+		icon = GFX_goal_generic_reactor_old
+		cost = 60
+		prerequisite = {
+			focus = wyoming_escapes
+		}
+		prerequisite = {
+			focus = wyoming_waterways
+		}
+		relative_position_id = wyoming_escapes
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = energy
+					amount = 8
+				}
+				if = {
+					limit = {
+						is_valid_state_for_civilian_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_tools
+		icon = GFX_goal_generic_tinker_workbench
+		cost = 60
+		prerequisite = {
+			focus = wyoming_escapes
+		}
+		relative_position_id = wyoming_escapes
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = tool_tech
+			}
+			random_owned_state = {
+				add_resource = {
+					type = metal
+					amount = 6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_comp
+		icon = GFX_goal_generic_extractor
+		cost = 60
+		prerequisite = {
+			focus = wyoming_tools
+		}
+		prerequisite = {
+			focus = wyoming_power
+		}
+		relative_position_id = wyoming_escapes
+		x = 1
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = building_tech
+			}
+			random_owned_state = {
+				add_resource = {
+					type = composites
+					amount = 6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_research
+		icon = GFX_goal_bobble_head_science
+		cost = 60
+		prerequisite = {
+			focus = wyoming_plants
+		}
+		prerequisite = {
+			focus = wyoming_comp
+		}
+		prerequisite = {
+			focus = wyoming_manpower_dos
+		}
+		relative_position_id = wyoming_plants
+		x = 0
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = wyoming_resources
+				add_idea = wyoming_resources_upgrade
+			}
+		}
+	}
+
+	##################
+	### Right Side ###
+	##################
+
+	focus = {
+		id = wyoming_right_opener_pro
+		icon = GFX_goal_generic_creature_molerat
+		cost = 60
+		allow_branch = {
+			original_tag = PRO
+		}
+		prerequisite = {
+			focus = wyoming_3
+		}
+		relative_position_id = wyoming_3
+		x = 7
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category =	cat_outsider_warfare
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = wyoming_army_exp_pro
+		icon = GFX_goal_generic_holy_shit_its_wendigos
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_opener_pro
+		}
+		relative_position_id = wyoming_right_opener_pro
+		x = -2
+		y = 1
+		completion_reward = {
+			army_experience = 50
+			add_equipment_to_stockpile = {
+				type = molerat_equipment
+				amount = 750
+				producer = PRO
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_training_idea_pro
+		icon = GFX_goal_imo_racree
+		cost = 60
+		prerequisite = {
+			focus = wyoming_army_exp_pro
+		}
+		relative_position_id = wyoming_army_exp_pro
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = pro_army_stuff_4
+		}
+	}
+	focus = {
+		id = wyoming_war_support_pro
+		icon = GFX_goal_propaganda_capitalist_3
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_opener_pro
+		}
+		relative_position_id = wyoming_right_opener_pro
+		x = 0
+		y = 1
+		completion_reward = {
+			add_war_support = 0.1
+			add_field_marshal_role = {
+				character = PRO_mole_boss
+				desc = ""
+				traits = {
+					hoarder_trait
+					strong_trait
+					enduring_trait
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_right_assymmetry_pro
+		icon = GFX_goal_generic_creature_wanamingo
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_opener_pro
+		}
+		relative_position_id = wyoming_right_opener_pro
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 3
+				category = cat_outsider_warfare
+			}
+		}
+	}
+
+
+	focus = {
+		id = wyoming_cute_idea_pro
+		icon = GFX_KHA_focus_camp_armouries
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_assymmetry_pro
+		}
+		relative_position_id = wyoming_right_assymmetry_pro
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = pro_army_stuff_1
+		}
+	}
+
+	focus = {
+		id = wyoming_arms_fact_1_pro
+		icon = GFX_goal_ATE_omen_of_destruction
+		cost = 60
+		prerequisite = {
+			focus = wyoming_war_support_pro
+		}
+		prerequisite = {
+			focus = wyoming_army_exp_pro
+		}
+		relative_position_id = wyoming_war_support_pro
+		x = -3
+		y = 2
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					NOT = { is_capital = yes }
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_planning_pro
+		icon = GFX_goal_propaganda_capitalist_2
+		cost = 60
+		prerequisite = {
+			focus = wyoming_war_support_pro
+		}
+		relative_position_id = wyoming_war_support_pro
+		x = 0
+		y = 1
+		completion_reward = {
+			army_experience = 10
+			PRO_mole_boss = {
+				add_attack = 2
+				add_logistics = 2
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_homeland_idea_pro
+		icon = GFX_goal_sln_blueprint
+		cost = 60
+		prerequisite = {
+			focus = wyoming_planning_pro
+		}
+		mutually_exclusive = {
+			focus = wyoming_expansion_idea_pro
+		}
+		relative_position_id = wyoming_planning_pro
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = pro_army_stuff_2
+		}
+	}
+
+	focus = {
+		id = wyoming_expansion_idea_pro
+		icon = GFX_goal_sln_hope
+		cost = 60
+		prerequisite = {
+			focus = wyoming_planning_pro
+		}
+		mutually_exclusive = {
+			focus = wyoming_homeland_idea_pro
+		}
+		relative_position_id = wyoming_planning_pro
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = pro_army_stuff_3
+		}
+	}
+
+	focus = {
+		id = wyoming_idea_coalesce_pro
+		icon = GFX_goal_behemoth_green
+		cost = 60
+		prerequisite = {
+			focus = wyoming_homeland_idea_pro
+			focus = wyoming_expansion_idea_pro
+		}
+		available = {
+			has_completed_focus = wyoming_cute_idea_pro
+			has_completed_focus = wyoming_training_idea_pro
+		}
+		relative_position_id = wyoming_planning_pro
+		x = 0
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = wyoming_idea_tt
+			hidden_effect = {
+				remove_ideas = {
+					idea = pro_army_stuff_1
+				}
+				remove_ideas = {
+					idea = pro_army_stuff_2
+				}
+				remove_ideas = {
+					idea = pro_army_stuff_3
+				}
+				remove_ideas = {
+					idea = pro_army_stuff_4
+				}
+				if = {
+					limit = {
+						has_completed_focus = wyoming_homeland_idea_pro
+					}
+					add_ideas = wyoming_idea_snake_of_wyoming_1
+				}
+				else = {
+					add_ideas = wyoming_idea_snake_of_wyoming_2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_arms_fact_2_pro
+		icon = GFX_goal_generic_pip_2000_vi_1
+		cost = 60
+		prerequisite = {
+			focus = wyoming_war_support_pro
+		}
+		prerequisite = {
+			focus = wyoming_right_assymmetry_pro
+		}
+		relative_position_id = wyoming_right_assymmetry_pro
+		x = 1
+		y = 2
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					NOT = { is_capital = yes }
+					is_core = yes
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	###########################
+	###########################
+	###########################
+	focus = {
+		id = wyoming_right_opener
+		icon = GFX_goal_generic_tractor_1
+		cost = 60
+		allow_branch = {
+			original_tag = SIE
+		}
+		prerequisite = {
+			focus = wyoming_3
+		}
+		relative_position_id = wyoming_3
+		x = 7
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = wyoming_assymetry
+				bonus = 1
+				uses = 1
+				category = cat_terror_tactics
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = wyoming_army_exp
+		icon = GFX_goal_generic_holy_shit_its_wendigos
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_opener
+		}
+		relative_position_id = wyoming_right_opener
+		x = -2
+		y = 1
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = wyoming_training_idea
+		icon = GFX_icon_two_cowboy_rule
+		cost = 60
+		prerequisite = {
+			focus = wyoming_army_exp
+		}
+		relative_position_id = wyoming_army_exp
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = wyoming_training
+		}
+	}
+	focus = {
+		id = wyoming_war_support
+		icon = GFX_goal_generic_free_states_soldier
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_opener
+		}
+		relative_position_id = wyoming_right_opener
+		x = 0
+		y = 1
+		completion_reward = {
+			add_war_support = 0.10
+			random_unit_leader = {
+				add_attack = 1
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_right_assymmetry
+		icon = GFX_goal_generic_smoking_cowboy
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_opener
+		}
+		relative_position_id = wyoming_right_opener
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = wyoming_assymetry
+				bonus = 0.40
+				uses = 3
+				category = cat_terror_tactics
+			}
+		}
+	}
+
+
+	focus = {
+		id = wyoming_cute_idea
+		icon = GFX_goal_generic_metal_focus
+		cost = 60
+		prerequisite = {
+			focus = wyoming_right_assymmetry
+		}
+		relative_position_id = wyoming_right_assymmetry
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = wyoming_defense
+		}
+	}
+
+	focus = {
+		id = wyoming_arms_fact_1
+		icon = GFX_goal_generic_bunkers_focus
+		cost = 60
+		prerequisite = {
+			focus = wyoming_war_support
+		}
+		prerequisite = {
+			focus = wyoming_army_exp
+		}
+		relative_position_id = wyoming_war_support
+		x = -3
+		y = 2
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					NOT = { is_capital = yes }
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_planning
+		icon = GFX_goal_generic_put_that_pistol_down
+		cost = 60
+		prerequisite = {
+			focus = wyoming_war_support
+		}
+		relative_position_id = wyoming_war_support
+		x = 0
+		y = 1
+		completion_reward = {
+			army_experience = 10
+			random_unit_leader = {
+				add_planning = 2
+				add_logistics = 2
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_homeland_idea
+		icon = GFX_goal_generic_building_focus
+		cost = 60
+		prerequisite = {
+			focus = wyoming_planning
+		}
+		mutually_exclusive = {
+			focus = wyoming_expansion_idea
+		}
+		relative_position_id = wyoming_planning
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = wyoming_homeland_doctrine
+		}
+	}
+
+	focus = {
+		id = wyoming_expansion_idea
+		icon = GFX_goal_generic_ideological_fury_focus
+		cost = 60
+		prerequisite = {
+			focus = wyoming_planning
+		}
+		mutually_exclusive = {
+			focus = wyoming_homeland_idea
+		}
+		relative_position_id = wyoming_planning
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = wyoming_expansion_doctrine
+		}
+	}
+
+	focus = {
+		id = wyoming_idea_coalesce
+		icon = GFX_goal_generic_protectron_conceptart_primm_slimm
+		cost = 60
+		prerequisite = {
+			focus = wyoming_homeland_idea
+			focus = wyoming_expansion_idea
+		}
+		prerequisite = {
+			focus = wyoming_arms_fact_1
+		}
+		prerequisite = {
+			focus = wyoming_arms_fact_2
+		}
+		relative_position_id = wyoming_planning
+		x = 0
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = wyoming_idea_tt
+			hidden_effect = {
+				remove_ideas = {
+					idea = wyoming_defense
+				}
+				remove_ideas = {
+					idea = wyoming_training
+				}
+				add_ideas = wyoming_idea_coalescence
+			}
+		}
+	}
+
+	focus = {
+		id = wyoming_arms_fact_2
+		icon = GFX_goal_generic_bunkers_focus
+		cost = 60
+		prerequisite = {
+			focus = wyoming_war_support
+		}
+		prerequisite = {
+			focus = wyoming_right_assymmetry
+		}
+		relative_position_id = wyoming_right_assymmetry
+		x = 1
+		y = 2
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					NOT = { is_capital = yes }
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	###################
+	### Prospectors ###
+	###################
+
+	focus = {
+		id = pro_out_of_the_mine
+		icon = GFX_goal_moleminer_gauntlet
+		cost = 60
+		allow_branch = {
+			original_tag = PRO
+		}
+		prerequisite = {
+			focus = wyoming_3
+		}
+		relative_position_id = wyoming_3
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = pro_research
+		icon = GFX_goal_generic_ammo_boxes_focus
+		cost = 60
+		prerequisite = {
+			focus = pro_out_of_the_mine
+		}
+		relative_position_id = pro_out_of_the_mine
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = weapon_bonus
+				bonus = 0.5
+				uses = 2
+				category = support_fireteam_tech_category
+			}
+		}
+	}
+
+	focus = {
+		id = pro_rockets
+		icon = GFX_goal_SOK_rocket_launcher
+		cost = 60
+		bypass = {
+			has_tech = aa_fireteam_equipment_tech
+		}
+		prerequisite = {
+			focus = pro_out_of_the_mine
+		}
+		relative_position_id = pro_out_of_the_mine
+		x = -2
+		y = 1
+		completion_reward = {
+			set_technology = {
+				aa_fireteam_equipment_tech = 1
+			}
+		}
+	}
+
+	focus = {
+		id = pro_rockets_red_glare
+		icon = GFX_goal_generic_grenade
+		cost = 60
+		prerequisite = {
+			focus = pro_research
+		}
+		prerequisite = {
+			focus = pro_rockets
+		}
+		relative_position_id = pro_rockets
+		x = 1
+		y = 1
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = demolitions_equipment_5
+				amount = 200
+				producer = USA
+			}
+		}
+	}
+
+	focus = {
+		id = pro_melee_weaponry
+		icon = GFX_goal_moleminer_gauntlet_2
+		cost = 60
+		prerequisite = {
+			focus = pro_out_of_the_mine
+		}
+		relative_position_id = pro_out_of_the_mine
+		x = 2
+		y = 1
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = melee_equipment_2
+				amount = 1000
+				producer = USA
+			}
+		}
+	}
+
+	focus = {
+		id = pro_mole_miner_gauntlets
+		icon = GFX_goal_moleminer_gauntlet
+		cost = 60
+		prerequisite = {
+			focus = pro_melee_weaponry
+		}
+		prerequisite = {
+			focus = pro_research
+		}
+		relative_position_id = pro_melee_weaponry
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = mole_miner_tech
+				bonus = 0.30
+				uses = 3
+				category = melee_weaponry_tech_category
+			}
+			country_event = {
+				id = nf_pro.3
+			}
+		}
+	}
+
+	focus = {
+		id = pro_wyoming_assertions
+		icon = GFX_goal_generic_bloody_sacrifice
+		cost = 60
+		available = {
+			SIE = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = pro_rockets
+		}
+		prerequisite = {
+			focus = pro_research
+		}
+		prerequisite = {
+			focus = pro_melee_weaponry
+		}
+		relative_position_id = pro_out_of_the_mine
+		x = 0
+		y = 3
+		completion_reward = {
+			SIE = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			hidden_effect = { #Clearing the cores is more performant healthy here
+				every_owned_state = {
+					limit = {
+						is_core_of = SIE
+					}
+					on_core = yes #Triggers the raider 'on_core' action
+					remove_core_of = SIE
+					remove_claim_by = SIE
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = pro_stormchasing
+		icon = GFX_goal_moleminer_sad_unpog
+		cost = 30
+		x = 19
+		y = 1
+		relative_position_id = pro_wyoming_assertions
+		prerequisite = {
+			focus = pro_wyoming_assertions
+		}
+		completion_reward = {
+			add_stability = 0.10
+			random_owned_state = {
+				add_resource = {
+					type = metal
+					amount = 4
+				}
+				add_resource = {
+					type = water
+					amount = 4
+				}
+				add_resource = {
+					type = energy
+					amount = 4
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = pro_appease_wind_spirits
+		icon = GFX_goal_WBH_skull_knives_kill_the_first
+		cost = 30
+		x = -4
+		y = 1
+		mutually_exclusive = {
+			focus = pro_storms_fury
+		}
+		available = {
+			has_idea = stm_chosen_ones
+		}
+		relative_position_id = pro_stormchasing
+		prerequisite = {
+			focus = pro_stormchasing
+		}
+		completion_reward = {
+			LON = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = pro_the_southern_run_2
+		icon = GFX_goal_pal_burn_the_city
+		cost = 60
+		bypass = {
+			DRY = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			is_neighbor_of = DRY
+		}
+		prerequisite = {
+			focus = pro_appease_wind_spirits
+			focus = pro_storms_fury
+		}
+		relative_position_id = pro_stormchasing
+		x = 0
+		y = 2
+		will_lead_to_war_with = DRY
+		completion_reward = {
+			DRY = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = pro_down_with_darkness_2
+		icon = GFX_goal_pal_salt_the_earth
+		cost = 60
+		bypass = {
+			YMP = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = pro_the_southern_run_2
+		}
+		relative_position_id = pro_the_southern_run_2
+		x = 1
+		y = 1
+		completion_reward = {
+			YMP = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = pro_the_wyoming_heirs_2
+		icon = GFX_goal_pal_the_below
+		cost = 60
+		available = {
+			TOB = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = pro_the_southern_run_2
+		}
+		relative_position_id = pro_the_southern_run_2
+		x = -1
+		y = 1
+		completion_reward = {
+			DRY = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			set_capital = {
+				state = 217
+				remember_old_capital = no
+			}
+			217 = {
+				add_resource = {
+					type = metal
+					amount = 6
+				}
+			}
+		}
+	}
+	focus = {
+		id = pro_the_wyoming_heirs_160
+		icon = GFX_goal_generic_vault_door_1
+		cost = 60
+		prerequisite = {
+			focus = pro_the_wyoming_heirs_2
+		}
+		prerequisite = {
+			focus = pro_down_with_darkness_2
+		}
+		available = {
+			TTM = {
+				owns_state = 38
+			}
+		}
+		relative_position_id = pro_the_wyoming_heirs_2
+		x = 1
+		y = 1
+		completion_reward = {
+			TTM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = pro_storms_fury
+		icon = GFX_goal_WBH_Gun_and_Skulls
+		cost = 30
+		x = 4
+		y = 1
+		mutually_exclusive = {
+			focus = pro_appease_wind_spirits
+		}
+		relative_position_id = pro_stormchasing
+		prerequisite = {
+			focus = pro_stormchasing
+		}
+		completion_reward = {
+			WYR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = pro_lightning_carriers
+		icon = GFX_goal_1_fire
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = pro_storms_fury
+		prerequisite = { focus = pro_storms_fury }
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 100.0
+			}
+					add_caps = yes
+			add_equipment_to_stockpile = {
+				type = ballistic_fireteam_equipment_3
+				amount = 250
+				producer = USA
+			}
+		}
+	}
+	focus = {
+		id = pro_gods_hammer
+		icon = GFX_goal_TTM_TOB_Flag
+		cost = 30
+		x = 0
+		y = 1
+
+		relative_position_id = pro_lightning_carriers
+		prerequisite = { focus = pro_lightning_carriers }
+		completion_reward = {
+			TOB = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = pro_abandoned_airfields
+		icon = GFX_goal_PLS_Military_Bunker
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = pro_appease_wind_spirits
+		available = {
+			controls_state = 1033
+			controls_state = 1034
+			controls_state = 1035
+			controls_state = 1036
+			controls_state = 1037
+			controls_state = 1038
+		}
+		prerequisite = { focus = pro_appease_wind_spirits }
+		completion_reward = {
+			effect_tooltip = {
+				1038 = {
+					custom_effect_tooltip = PRO_every_state_bunker_tt
+				}
+				1033 = {
+					custom_effect_tooltip = PRO_every_state_bunker_tt
+				}
+				1034 = {
+					custom_effect_tooltip = PRO_every_state_bunker_tt
+				}
+				1035 = {
+					custom_effect_tooltip = PRO_every_state_bunker_tt
+				}
+				1036 = {
+					custom_effect_tooltip = PRO_every_state_bunker_tt
+				}
+				1037 = {
+					custom_effect_tooltip = PRO_every_state_bunker_tt
+				}
+			}
+			hidden_effect = {
+				1033 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+				1036 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+				1034 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+				1038 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+				1037 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+				1035 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = pro_rewire_radio_towers
+		icon = GFX_goal_generic_f76_player2
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = pro_appease_wind_spirits
+		prerequisite = { focus = pro_appease_wind_spirits }
+		completion_reward = {
+			add_ideas = pro_chaser_mentality
+		}
+	}
+	focus = {
+		id = pro_rewire_radio_towers_2
+		icon = GFX_goal_MOJ_gun_runner_caravan_raids
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = pro_rewire_radio_towers
+		prerequisite = { focus = pro_rewire_radio_towers }
+		completion_reward = {
+			set_technology = { fireteam_elite_weaponry_tech = 1 }
+		}
+	}
+
+	focus = {
+		id = pro_secret_stash_air_force
+		icon = GFX_goal_generic_nuka_break_nuke
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = pro_abandoned_airfields
+		prerequisite = { focus = pro_abandoned_airfields }
+		completion_reward = {
+			set_technology = {
+				mininuke_unlock_tech = 1
+			}
+		}
+	}
+
+	focus = {
+		id = pro_ancestral_knowledge
+		icon = GFX_goal_TTM_Fire_2
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = pro_secret_stash_air_force
+		prerequisite = { focus = pro_secret_stash_air_force }
+		prerequisite = { focus = pro_rewire_radio_towers_2 }
+		completion_reward = {
+			EAG = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = pro_kid_namer
+		icon = GFX_goal_NEW_Caps_for_Loyalty #ENC_geck
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = pro_ancestral_knowledge
+		prerequisite = { 
+			focus = pro_ancestral_knowledge 
+		}
+		completion_reward = {
+			add_ideas = pro_stash
+		}
+	}
+	
+	focus = {
+		id = pro_finger_finisher
+		icon = GFX_goal_TTM_Volcano
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = pro_ancestral_knowledge
+		prerequisite = { 
+			focus = pro_ancestral_knowledge 
+		}
+		completion_reward = {
+			custom_effect_tooltip = wyoming_colorado_claim_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_colorado_state = yes
+					}
+					add_claim_by = PRO
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = pro_gods_butchers
+		icon = GFX_goal_ORO_Gehenna
+		cost = 30
+		x = -2
+		y = 1
+		available = {
+			owns_state = 78
+		}
+		relative_position_id = pro_gods_hammer
+		prerequisite = { focus = pro_gods_hammer }
+		completion_reward = {
+			set_technology = { gehenna_molech_tech = 1 }
+		}
+	}
+	focus = {
+		id = pro_thunder_struck
+		icon = GFX_goal_TTM_Spores
+		cost = 30
+		x = 0
+		y = 1
+		available = {
+			owns_state = 78
+		}
+		relative_position_id = pro_gods_hammer
+		prerequisite = { focus = pro_gods_hammer }
+		completion_reward = {
+			set_technology = { plant_support_tech = 1 }
+		}
+	}
+	focus = {
+		id = pro_divine_assistance
+		icon = GFX_goal_generic_holy_shit_its_wendigos
+		cost = 30
+		x = 2
+		y = 1
+		available = {
+			owns_state = 78
+		}
+		relative_position_id = pro_gods_hammer
+		prerequisite = { focus = pro_gods_hammer }
+		completion_reward = {
+			set_technology = { super_mutant_nightkin_tech = 1 }
+		}
+	}
+	focus = {
+		id = pro_bazin
+		icon = GFX_goal_ORO_Ultracite
+		cost = 30
+		x = 0
+		y = 1
+		available = {
+			has_army_experience > 99
+		}
+		relative_position_id = pro_thunder_struck
+		prerequisite = { focus = pro_gods_butchers }
+		prerequisite = { focus = pro_thunder_struck }
+		prerequisite = { focus = pro_divine_assistance }
+		completion_reward = {
+			set_technology = { special_forces_tech_level_settler = 1 }
+			set_technology = { exoskin_armoured_special_forces = 1 }
+			army_experience = -100
+		}
+	}
+
+	##███╗░░░███╗░█████╗░██╗░░░░░███████╗
+	##████╗░████║██╔══██╗██║░░░░░██╔════╝
+	##██╔████╔██║██║░░██║██║░░░░░█████╗░░
+	##██║╚██╔╝██║██║░░██║██║░░░░░██╔══╝░░
+	##██║░╚═╝░██║╚█████╔╝███████╗███████╗
+	
+	focus = {
+		id = FIN_increase_military_budget
+		icon = GFX_goal_moleminer_sad_unpog
+		
+		x = 0
+		y = 1
+		relative_position_id = pro_wyoming_assertions
+		cost = 5
+		prerequisite = { focus = pro_wyoming_assertions }
+
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_suomen_maavoimat
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_increase_military_budget }
+
+		x = -6
+		y = 1
+		relative_position_id = FIN_increase_military_budget
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FIN_operation_kilpapurjehdus
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_maavoimat }
+
+		x = -2
+		y = 1
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_extra_refresher_exercises
+		icon = GFX_goal_generic_f76_player2
+		prerequisite = { focus = FIN_suomen_maavoimat }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+			DRY = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_the_cold_front
+		icon = GFX_goal_TTM_YMP_Flag
+		prerequisite = { focus = FIN_extra_refresher_exercises }
+
+		x = -2
+		y = 1
+		relative_position_id = FIN_extra_refresher_exercises
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			YMP = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_jaeger_movement
+		icon = GFX_goal_TTM_TOB_Flag
+		prerequisite = { focus = FIN_extra_refresher_exercises }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_extra_refresher_exercises
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+			TOB = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_salvaged_and_retooled
+		icon = GFX_goal_pal_the_below
+		prerequisite = { focus = FIN_extra_refresher_exercises }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_extra_refresher_exercises
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+			DRY = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			set_capital = {
+				state = 217
+				remember_old_capital = no
+			}
+			217 = {
+				add_resource = {
+					type = metal
+					amount = 6
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_winter_warfare
+		icon = GFX_goal_TTM_Twin_Mothers_Destroyed
+		prerequisite = { focus = FIN_the_cold_front }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_the_cold_front
+		cost = 5
+		available = {
+			TTM = {
+				owns_state = 38
+			}
+		}
+
+		completion_reward = {
+			TTM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_motti_tactics
+		icon = GFX_goal_TTM_Dinosaur_Bones
+		prerequisite = { focus = FIN_jaeger_movement }
+		prerequisite = { focus = FIN_the_cold_front }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_jaeger_movement
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_motti_tactics
+		icon = GFX_goal_TTM_ORO_Flag
+		prerequisite = { focus = FIN_jaeger_movement }
+		prerequisite = { focus = FIN_the_cold_front }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_jaeger_movement
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			ORO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_foreign_armor
+		icon = GFX_goal_generic_ruby_focus
+		prerequisite = { focus = FIN_salvaged_and_retooled }
+		mutually_exclusive = { focus = FIN_helsinki_air_defense }
+		x = 1
+		y = 1
+		relative_position_id = FIN_salvaged_and_retooled
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = PRO_mining_formable
+		}
+	}
+	
+	focus = {
+		id = FIN_utilize_the_sami
+		icon = GFX_goal_ORO_Gehenna
+		prerequisite = { focus = FIN_motti_tactics }
+
+		x = -2
+		y = 1
+		relative_position_id = FIN_motti_tactics
+		cost = 5
+		
+		available = {
+			owns_state = 78
+			controls_state = 78
+		}
+
+		completion_reward = {
+			set_technology = { gehenna_molech_tech = 1 }
+		}
+	}
+
+	focus = {
+		id = FIN_long_range_patrols
+		icon = GFX_goal_TTM_Spores
+		prerequisite = { focus = FIN_motti_tactics }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_motti_tactics
+		cost = 5
+		
+		available = {
+			owns_state = 78
+			controls_state = 78
+		}
+
+		completion_reward = {
+			set_technology = { plant_support_tech = 1 }
+		}
+	}
+	
+	focus = {
+		id = FIN_finnish_radio_intelligence
+		icon = GFX_goal_generic_holy_shit_its_wendigos
+		prerequisite = { focus = FIN_motti_tactics }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_motti_tactics
+		cost = 5
+		available = {
+			owns_state = 78
+			controls_state = 78
+		}
+		
+		completion_reward = {
+			set_technology = { super_mutant_nightkin_tech = 1 }
+		}
+	}
+	
+	focus = {
+		id = FIN_sissi
+		icon = GFX_goal_ORO_Ultracite
+		prerequisite = { focus = FIN_utilize_the_sami }
+		prerequisite = { focus = FIN_long_range_patrols }
+		prerequisite = { focus = FIN_finnish_radio_intelligence }
+		mutually_exclusive = { focus = FIN_national_armor_focus }
+		x = 0
+		y = 1
+		relative_position_id = FIN_long_range_patrols
+		cost = 10
+		available = {
+			has_army_experience > 99
+		}
+		
+		completion_reward = {
+			set_technology = { special_forces_tech_level_settler = 1 }
+			set_technology = { exoskin_armoured_special_forces = 1 }
+			army_experience = -100
+		}
+	}
+	
+	focus = {
+		id = FIN_national_armor_focus
+		icon = GFX_goal_generic_power_armour_raider_overboss
+		prerequisite = { focus = FIN_salvaged_and_retooled }
+		prerequisite = { focus = FIN_finnish_radio_intelligence }
+		mutually_exclusive = { focus = FIN_sissi }
+		x = 0
+		y = 3
+		relative_position_id = FIN_salvaged_and_retooled
+		cost = 10
+		available = {
+		}
+		
+		completion_reward = {
+			add_ideas = raider_power_armour_familiarity	
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.5
+				#ahead_reduction = 0.5
+				category = power_armor_tech_category
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_innovative_designs
+		icon = GFX_goal_generic_power_armor_blue
+		prerequisite = { focus = FIN_national_armor_focus }
+		x = 0
+		y = 1
+		relative_position_id = FIN_national_armor_focus
+		cost = 5
+		
+		completion_reward = {
+			set_technology = { power_armour_tech_level_scientific = 1 }
+			add_tech_bonus = {
+				uses = 1
+				#bonus = 0.5
+				ahead_reduction = 1.5
+				category = power_armor_tech_category
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_underground_resistance_cells
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_maavoimat }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_mannerheim_line
+		icon = GFX_goal_PLS_Military_Bunker
+		prerequisite = { focus = FIN_suomen_maavoimat }
+
+		x = 4
+		y = 1
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_defense_in_depth
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_mannerheim_line }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_mannerheim_line
+		cost = 10
+		available = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_helsinki_air_defense
+		icon = GFX_goal_WBH_dark_foundries #CHC_thralls_into_the_mines
+		prerequisite = { focus = FIN_mannerheim_line focus = FIN_expand_air_bases }
+		mutually_exclusive = { focus = FIN_foreign_armor }
+		
+		x = 1
+		y = 2
+		relative_position_id = FIN_mannerheim_line
+		cost = 5
+		available = {
+		}
+		
+		completion_reward = {
+			set_cosmetic_tag = PRO_horde_formable
+		}
+	}
+	
+	focus = {
+		id = FIN_suomen_ilmavoimat
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_increase_military_budget }
+
+		x = 7
+		y = 0
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 10
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_expand_air_bases
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_ilmavoimat }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_suomen_ilmavoimat
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FIN_foreign_aircraft
+		icon = GFX_goal_lon_flag
+		prerequisite = { focus = FIN_expand_air_bases }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_expand_air_bases
+		cost = 5
+		available = {
+		}
+		
+		completion_reward = {
+			LON = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_pilot_training
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_ilmavoimat }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_suomen_ilmavoimat
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FIN_expand_air_force_academy
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_pilot_training }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_pilot_training
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = FIN_naval_airforce
+		icon = GFX_goal_generic_creature_bald_eagle
+		prerequisite = { focus = FIN_suomen_ilmavoimat }
+		prerequisite = { focus = FIN_suomen_merivoimat }
+
+		x = 2
+		y = 3
+		relative_position_id = FIN_suomen_ilmavoimat
+		cost = 10
+		available = {
+		
+		}
+
+		completion_reward = {
+			EAG = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_national_aircraft_production
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_expand_air_bases }
+		prerequisite = { focus = FIN_pilot_training }
+
+		x = 1
+		y = 2
+		relative_position_id = FIN_expand_air_bases
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_support_for_ground_forces
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_national_aircraft_production }
+		mutually_exclusive = { focus = FIN_dominate_the_skies }
+		x = -1
+		y = 1
+		relative_position_id = FIN_national_aircraft_production
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_dominate_the_skies
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_national_aircraft_production }
+		mutually_exclusive = { focus = FIN_support_for_ground_forces }
+		x = 1
+		y = 1
+		relative_position_id = FIN_national_aircraft_production
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = wyoming_colorado_claim_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_colorado_state = yes
+					}
+					add_claim_by = PRO
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_expand_production_lines
+		icon = GFX_goal_generic_state_wyoming
+		prerequisite = { focus = FIN_support_for_ground_forces focus = FIN_dominate_the_skies }
+		prerequisite = { focus = FIN_helsinki_air_defense }
+		mutually_exclusive = { focus = FIN_modernize_production_lines }
+		x = -1
+		y = 1
+		relative_position_id = FIN_support_for_ground_forces
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_modernize_production_lines
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_dominate_the_skies focus = FIN_support_for_ground_forces }
+		prerequisite = { focus = FIN_naval_airforce }
+		mutually_exclusive = { focus = FIN_expand_production_lines }
+		x = 1
+		y = 1
+		relative_position_id = FIN_dominate_the_skies
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_suomen_merivoimat
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_increase_military_budget }
+
+		x = 6
+		y = 0
+		relative_position_id = FIN_suomen_ilmavoimat
+		cost = 10
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_the_merchant_fleet
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_merivoimat }
+
+		x = -3
+		y = 1
+		relative_position_id = FIN_suomen_merivoimat
+		cost = 10
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_conversion_of_civilian_vessels
+		icon = GFX_goal_NEW_Caps_for_Loyalty
+		prerequisite = { focus = FIN_the_merchant_fleet }
+		prerequisite = { focus = FIN_coastal_defense }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_the_merchant_fleet
+		cost = 10
+		available = {
+		}
+		
+		completion_reward = {
+			add_ideas = pro_stash
+		}
+	}
+	
+	focus = {
+		id = FIN_coastal_defense
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_merivoimat }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_suomen_merivoimat
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FIN_marine_jaeger_divisions
+		icon = GFX_goal_generic_f76_player2
+		prerequisite = { focus = FIN_coastal_defense }
+		x = 0
+		y = 1
+		relative_position_id = FIN_coastal_defense
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = pro_chaser_mentality
+		}
+	}
+	
+	focus = {
+		id = FIN_rapid_raiders
+		icon = GFX_goal_MOJ_technology_raids
+		prerequisite = { focus = FIN_coastal_defense }
+		mutually_exclusive = { focus = FIN_deep_sea_raiders }
+		x = -1
+		y = 2
+		relative_position_id = FIN_coastal_defense
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			set_technology = { demolitions_elite_weaponry_tech = 1 }
+		}
+	}
+	
+	focus = {
+		id = FIN_deep_sea_raiders
+		icon = GFX_goal_MOJ_gun_runner_caravan_raids
+		prerequisite = { focus = FIN_coastal_defense }
+		mutually_exclusive = { focus = FIN_rapid_raiders }
+		x = 1
+		y = 2
+		relative_position_id = FIN_coastal_defense
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			set_technology = { fireteam_elite_weaponry_tech = 1 }
+		}
+	}
+	
+	focus = {
+		id = FIN_sea_mines_strategy
+		icon = GFX_goal_generic_advanced_ammo
+		prerequisite = { focus = FIN_rapid_raiders focus = FIN_deep_sea_raiders }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_rapid_raiders
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			set_technology = { support_tech_level_scientific = 1 }
+		}
+	}
+	
+	focus = {
+		id = FIN_strengthen_the_naval_bases
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_merivoimat }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_suomen_merivoimat
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FIN_acquire_andros_dockyards
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_suomen_merivoimat }
+
+		x = 4
+		y = 1
+		relative_position_id = FIN_suomen_merivoimat
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FIN_expand_ship_building_industry
+		icon = GFX_goal_moleminer_sad_unpog
+		prerequisite = { focus = FIN_strengthen_the_naval_bases }
+		prerequisite = { focus = FIN_acquire_andros_dockyards }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_strengthen_the_naval_bases
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FIN_expansion_towards_the_atlantic
+		icon = GFX_goal_generic_nuka_break_nuke
+		prerequisite = { focus = FIN_sea_mines_strategy }
+		prerequisite = { focus = FIN_expand_ship_building_industry }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_sea_mines_strategy
+		cost = 10
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+	###########################
+	### Sietch Unique Focus ###
+	###########################
+
+	focus = {
+		id = sie_cowboys_and_tribals
+		icon = GFX_goal_generic_ideological_fury_focus
+		cost = 60
+		allow_branch = {
+			original_tag = SIE
+		}
+		prerequisite = {
+			focus = wyoming_3
+		}
+		relative_position_id = wyoming_3
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = sie_tribal_measures
+		icon = GFX_goal_native_american_headdress
+		cost = 60
+		prerequisite = {
+			focus = sie_cowboys_and_tribals
+		}
+		relative_position_id = sie_cowboys_and_tribals
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = sie_arapaho_idea_1
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = infantry_tech_category
+			}
+		}
+	}
+
+	focus = {
+		id = sie_two_sides_alike_in_troubles
+		icon = GFX_goal_generic_tomahawk_1
+		cost = 60
+		prerequisite = {
+			focus = sie_cowboys_and_tribals
+		}
+		relative_position_id = sie_cowboys_and_tribals
+		x = 0
+		y = 1
+		completion_reward = {
+			country_event = {
+				id = nf_sie.4
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = sie_medicine_men_with_medicine_sticks
+		icon = GFX_goal_chem_super_stim
+		cost = 60
+		prerequisite = {
+			focus = sie_tribal_measures
+		}
+		prerequisite = {
+			focus = sie_two_sides_alike_in_troubles
+		}
+		relative_position_id = sie_tribal_measures
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 2
+				category = support_medical_tech_category
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = USA
+			}
+		}
+	}
+
+	focus = {
+		id = sie_old_cowboy
+		icon = GFX_goal_generic_cowboys
+		cost = 60
+		prerequisite = {
+			focus = sie_cowboys_and_tribals
+		}
+		relative_position_id = sie_cowboys_and_tribals
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = sie_cowboy_idea_1
+		}
+	}
+
+	focus = {
+		id = sie_cowboy_equipment
+		icon = GFX_goal_revolver
+		cost = 60
+		prerequisite = {
+			focus = sie_old_cowboy
+		}
+		prerequisite = {
+			focus = sie_two_sides_alike_in_troubles
+		}
+		relative_position_id = sie_old_cowboy
+		x = -1
+		y = 1
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = ballistic_equipment_4
+				amount = 200
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = demolitions_equipment
+				amount = 250
+				producer = USA
+			}
+		}
+	}
+
+	focus = {
+		id = sie_safety_in_wyoming
+		icon = GFX_goal_generic_wyoming
+		cost = 60
+		available = {
+			PRO = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = sie_medicine_men_with_medicine_sticks
+		}
+		prerequisite = {
+			focus = sie_cowboy_equipment
+		}
+		relative_position_id = sie_two_sides_alike_in_troubles
+		x = 0
+		y = 2
+		completion_reward = {
+			country_event = {
+				id = nf_sie.3
+			}
+			PRO = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			hidden_effect = { #Clearing the cores is more performant healthy here
+				every_owned_state = {
+					limit = {
+						is_core_of = PRO
+					}
+					on_core = yes #Triggers the raider 'on_core' action
+					remove_core_of = PRO
+					remove_claim_by = PRO
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sie_cowboys_ride_alone
+		icon = GFX_goal_generic_smoking_cowboy
+		cost = 60
+		prerequisite = {
+			focus = sie_safety_in_wyoming
+		}
+		mutually_exclusive = {
+			focus = sie_the_federation
+		}
+		available = {
+			always = no
+		}
+		relative_position_id = sie_safety_in_wyoming
+		x = 1
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+			remove_ideas = sie_arapaho_idea_1
+			hidden_effect = {
+				set_politics = {
+					ruling_party = intellectuals
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = intellectuals
+					popularity = 0.50
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sie_the_federation
+		icon = GFX_goal_generic_tomahawk_2
+		cost = 60
+		prerequisite = {
+			focus = sie_safety_in_wyoming
+		}
+		mutually_exclusive = {
+			focus = sie_cowboys_ride_alone
+		}
+		available = {
+			always = no
+		}
+		relative_position_id = sie_safety_in_wyoming
+		x = -1
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = SIE_alliance
+		}
+	}
+
+	focus = {
+		id = sie_pathfinders
+		icon = GFX_goal_tribal_generic
+		cost = 60
+		prerequisite = {
+			focus = sie_the_federation
+		}
+		relative_position_id = sie_the_federation
+		x = -1
+		y = 2
+		completion_reward = {
+			set_technology = {
+				pathfinders = 1
+			}
+			swap_ideas = {
+				remove_idea = sie_arapaho_idea_1
+				add_idea = sie_arapaho_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = sie_provide_for_our_own
+		icon = GFX_goal_generic_focus_solar_energy
+		cost = 60
+		prerequisite = {
+			focus = sie_the_federation
+		}
+		relative_position_id = sie_the_federation
+		x = -2
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = water
+					amount = 12
+				}
+				add_resource = {
+					type = energy
+					amount = 12
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sie_foundations
+		icon = GFX_goal_generic_slums_focus
+		cost = 60
+		prerequisite = {
+			focus = sie_the_federation
+		}
+		relative_position_id = sie_the_federation
+		x = -4
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				if = {
+					limit = {
+						is_valid_state_for_arms_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						is_valid_state_for_civilian_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sie_workshopping
+		icon = GFX_goal_generic_focus_solar_energy
+		cost = 60
+		prerequisite = {
+			focus = sie_foundations
+		}
+		relative_position_id = sie_foundations
+		x = -1
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_valid_state_for_2_civilian_factories = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = sie_a_beautiful_land
+		icon = GFX_goal_generic_trade_economy
+		cost = 60
+		prerequisite = {
+			focus = sie_foundations
+		}
+		prerequisite = {
+			focus = sie_provide_for_our_own
+		}
+		relative_position_id = sie_foundations
+		x = 1
+		y = 1
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = sie_arapohe_capstone
+		icon = GFX_goal_generic_nice_car
+		cost = 60
+		prerequisite = {
+			focus = sie_a_beautiful_land
+		}
+		prerequisite = {
+			focus = sie_pathfinders
+		}
+		relative_position_id = sie_a_beautiful_land
+		x = 1
+		y = 1
+		completion_reward = {
+			set_technology = {
+				vehicles_tech_level_scientific = 1
+			}
+			random_owned_state = {
+				limit = {
+					NOT = { is_capital = yes }
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sie_wyoming_formable
+		icon = GFX_goal_generic_rifle_3
+		cost = 60
+		prerequisite = {
+			focus = sie_cowboys_ride_alone
+		}
+		relative_position_id = sie_cowboys_ride_alone
+		x = 1
+		y = 2
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 55
+						region = 151
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = sie_wyoming_roads
+		icon = GFX_goal_generic_road_construction
+		cost = 60
+		prerequisite = {
+			focus = sie_cowboys_ride_alone
+		}
+		relative_position_id = sie_cowboys_ride_alone
+		x = 2
+		y = 1
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sie_wyoming_armories
+		icon = GFX_goal_generic_advanced_firearms_focus
+		cost = 60
+		prerequisite = {
+			focus = sie_cowboys_ride_alone
+		}
+		relative_position_id = sie_cowboys_ride_alone
+		x = 4
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 3
+				category = infantry_weapons_tech_category
+				name = infantry_weapons_bonus
+			}
+		}
+	}
+
+	focus = {
+		id = sie_wyoming_rangers
+		icon = GFX_goal_NCR_Rangergeneral
+		cost = 60
+		prerequisite = {
+			focus = sie_wyoming_armories
+		}
+		relative_position_id = sie_wyoming_armories
+		x = 1
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = sie_cowboy_idea_1
+				add_idea = sie_cowboy_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = sie_the_guns_of_wyoming
+		icon = GFX_goal_generic_land_doctrines_focus
+		cost = 60
+		prerequisite = {
+			focus = sie_wyoming_armories
+		}
+		prerequisite = {
+			focus = sie_wyoming_roads
+		}
+		relative_position_id = sie_wyoming_roads
+		x = 1
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = metal
+					amount = 6
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_land_doctrine
+				category = spec_force_doctrine_category
+			}
+		}
+	}
+
+	focus = {
+		id = sie_wyoming_once_again
+		icon = GFX_goal_generic_state_wyoming_2
+		cost = 60
+		available = {
+			num_of_controlled_states > 16
+		}
+		prerequisite = {
+			focus = sie_wyoming_formable
+		}
+		prerequisite = {
+			focus = sie_wyoming_roads
+		}
+		relative_position_id = sie_cowboys_ride_alone
+		x = 2
+		y = 3
+		completion_reward = {
+			set_cosmetic_tag = SIE_wyoming
+			add_political_power = 250
+			random_owned_state = {
+				if = {
+					limit = {
+						is_valid_state_for_civilian_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}

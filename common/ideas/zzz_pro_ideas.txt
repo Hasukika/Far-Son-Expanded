@@ -1,0 +1,148 @@
+ideas = {
+	country = {
+		pro_ultracite = {
+			picture = pickaxe
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.25
+				#consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				army_attack_speed_factor = 0.15
+			}
+		}
+		pro_chaser_mentality = {
+			picture = mole_miner_pike
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				#army_attack_factor = 0.085
+				#army_org_factor = 0.10
+				land_night_attack = 0.25
+			}
+		}
+		pro_stash = {
+			picture = generic_caps
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				min_export = -0.15
+				#army_attack_factor = 0.085
+				#army_org_factor = 0.10
+				caps_expense_modifier = -0.2
+				caps_flat_income_modifier = -2.5
+				#land_night_attack = 0.25
+			}
+		}
+		pro_army_stuff_1 = {
+			picture = generic_mutant_head_smashed
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				#army_attack_factor = -0.025
+				initiative_factor = -0.1
+				army_org_factor = 0.1
+			}
+		}
+		pro_army_stuff_2 = {
+			picture = bdt_realm_of_bone
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				max_command_power = 50
+				max_planning_factor = 0.075
+			}
+		}
+		pro_army_stuff_3 = {
+			picture = apocalypse_now
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				no_supply_grace = 120
+				pocket_penalty = -0.50
+			}
+		}
+		pro_army_stuff_4 = {
+			picture = generic_shovel
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				attrition = -0.15
+				dig_in_speed_factor = 0.5
+			}
+		}
+		wyoming_idea_snake_of_wyoming_1 = {
+			picture = BDT_unity
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				attrition = -0.20
+				dig_in_speed_factor = 0.5
+				max_command_power = 75
+				max_planning_factor = 0.01
+				initiative_factor = -0.2
+				army_org_factor = 0.1
+			}
+		}
+		wyoming_idea_snake_of_wyoming_2 = {
+			picture = BDT_unity
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				attrition = -0.20
+				dig_in_speed_factor = 0.5
+				no_supply_grace = 200
+				pocket_penalty = -0.75
+				initiative_factor = -0.75
+				army_org_factor = 0.1
+			}
+		}
+	}
+	hidden_ideas = {
+	}
+}

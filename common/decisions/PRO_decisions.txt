@@ -1,0 +1,1052 @@
+pro_deepmine_cat = {
+	pro_mine_decision_1 = {
+		icon = GFX_decision_generic_construction
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			#NOT = { has_country_flag = PRO_mine_expanded_0 }
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		days_remove = 25
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		modifier = { civilian_factory_use = 2 }
+		remove_effect = {
+			custom_effect_tooltip = pro_mine_decision_1_tt
+			set_country_flag = PRO_mine_expanded_0
+		}
+	}
+	pro_mine_decision_resource_1 = {
+		icon = GFX_decision_steel
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_0
+			NOT = { 
+				OR = {
+					#has_country_flag = PRO_mine_expanding_resource_0 
+					has_country_flag = PRO_mine_expanding_industry_0
+					has_country_flag = PRO_mine_expanding_housing_0
+				}
+			}
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 25
+		modifier = { civilian_factory_use = 2 }
+		complete_effect = {
+			set_country_flag = PRO_mine_expanding_resource_0
+		}
+		remove_effect = {
+			add_resource = {
+				type = metal
+				amount = 10
+				state = 1033
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = foundry_tech_category
+			}
+			set_country_flag = PRO_mine_expanded_resource_0
+			custom_effect_tooltip = pro_mine_decision_resource_1_tt
+		}
+	}
+	pro_mine_decision_resource_2 = {
+		icon = GFX_decision_steel
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_resource_0
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 4 }
+		remove_effect = {
+			add_resource = {
+				type = water
+				amount = 5
+				state = 1033
+			}
+			add_resource = {
+				type = composites
+				amount = 8
+				state = 1033
+			}
+			1033 = {
+				add_building_construction = {
+					type = metal_generator
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			set_country_flag = PRO_mine_expanded_resource_1
+			custom_effect_tooltip = pro_mine_decision_resource_2_tt
+		}
+	}
+	pro_mine_decision_resource_3 = {
+		icon = GFX_decision_steel
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_resource_1
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 6 }
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = extraction_category
+			}
+			1033 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = PRO_mine_expanded_resource_2
+			custom_effect_tooltip = pro_mine_decision_resource_3_tt
+		}
+	}
+	pro_mine_decision_resource_4 = {
+		icon = GFX_decision_steel
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_resource_2
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 10 }
+		remove_effect = {
+			add_ideas = pro_ultracite
+			custom_effect_tooltip = pro_mine_decision_resource_4_tt
+		}
+	}
+	#pro_mine_decision_defense_1 = {
+	#	icon = GFX_decision_generic_construction
+	#	allowed = {
+	#		original_tag = PRO
+	#	}
+	#	visible = {
+	#		has_country_flag = PRO_mine_expanded_0
+	#	}
+	#	available = {
+	#		controls_state = 1033
+	#	}
+	#	ai_will_do = {
+	#		base = 66
+	#	}
+	#	fire_only_once = yes
+	#	highlight_states = highlight_states = {
+	#	highlight_state_targets = { state = 1033 }
+	#	}
+	#	complete_effect = {
+	#		custom_effect_tooltip = pro_mine_decision_defense_1_tt
+	#	}
+	#}
+	pro_mine_decision_industry_1 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_0
+			NOT = { 
+				OR = {
+					has_country_flag = PRO_mine_expanding_resource_0 
+					#has_country_flag = PRO_mine_expanding_industry_0
+					has_country_flag = PRO_mine_expanding_housing_0
+				}
+			}
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 25
+		modifier = { civilian_factory_use = 2 }
+		complete_effect = {
+			set_country_flag = PRO_mine_expanding_industry_0
+		}
+		remove_effect = {
+			1033 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 1
+				category = building_tech
+			}
+			set_country_flag = PRO_mine_expanded_industry_0
+			custom_effect_tooltip = pro_mine_decision_industry_1_tt
+		}
+	}
+	pro_mine_decision_industry_2 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_industry_0
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 4 }
+		remove_effect = {
+			1033 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = PRO_mine_expanded_industry_1
+			custom_effect_tooltip = pro_mine_decision_industry_2_tt
+		}
+	}
+	pro_mine_decision_industry_3 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_industry_1
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 6 }
+		remove_effect = {
+			1033 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = electricity_generator
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			set_country_flag = PRO_mine_expanded_industry_2
+			custom_effect_tooltip = pro_mine_decision_industry_3_tt
+		}
+	}
+	pro_mine_decision_industry_4 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_industry_2
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 10 }
+		remove_effect = {
+			#add_ideas = pro_ultracite
+			1033 = {
+				add_dynamic_modifier = {
+					modifier = PRO_far_son_mine_industry_final
+				}
+			}
+			custom_effect_tooltip = pro_mine_decision_industry_4_tt
+		}
+	}
+	pro_mine_decision_housing_1 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_0
+			NOT = { 
+				OR = {
+					has_country_flag = PRO_mine_expanding_resource_0 
+					has_country_flag = PRO_mine_expanding_industry_0
+					#has_country_flag = PRO_mine_expanding_housing_0
+				}
+			}
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 25
+		modifier = { civilian_factory_use = 2 }
+		complete_effect = {
+			set_country_flag = PRO_mine_expanding_housing_0
+		}
+		remove_effect = {
+			1033 = {
+				add_manpower = 2130
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			set_country_flag = PRO_mine_expanded_housing_0
+			custom_effect_tooltip = pro_mine_decision_housing_1_tt
+		}
+	}
+	pro_mine_decision_housing_2 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_housing_0
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 4 }
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { 
+						has_technology = underground_ventilation_tech
+					}
+				}
+				set_technology = {
+					underground_ventilation_tech = 1
+				}
+			}
+			else = {
+				1033 = {
+					add_manpower = 5000
+				}
+				add_stability = 0.08
+			}
+			set_country_flag = PRO_mine_expanded_housing_1
+			custom_effect_tooltip = pro_mine_decision_housing_2_tt
+		}
+	}
+	pro_mine_decision_housing_3 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_housing_1
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 6 }
+		remove_effect = {
+			add_extra_state_shared_building_slots = 5
+			1033 = {
+				add_manpower = 3170
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_stability = 0.025
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = habitation_category
+			}
+			set_country_flag = PRO_mine_expanded_housing_2
+			custom_effect_tooltip = pro_mine_decision_housing_3_tt
+		}
+	}
+	pro_mine_decision_housing_4 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_mine_expanded_housing_2
+		}
+		available = {
+			controls_state = 1033
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 1033 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 10 }
+		remove_effect = {
+			1033 = {
+				add_manpower = 15220
+			}
+			add_extra_state_shared_building_slots = 2
+			add_research_slot = 1
+			custom_effect_tooltip = pro_mine_decision_housing_4_tt
+		}
+	}
+###########################################################################################################################################################
+###########################################################################################################################################################
+###########################################################################################################################################################
+###########################################################################################################################################################
+	pro_deep_decision_1 = {
+		icon = GFX_decision_generic_construction
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			#NOT = { has_country_flag = PRO_deep_expanded_0 }
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		days_remove = 25
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		modifier = { civilian_factory_use = 2 }
+		remove_effect = {
+			custom_effect_tooltip = pro_deep_decision_1_tt
+			set_country_flag = PRO_deep_expanded_0
+		}
+	}
+	pro_deep_decision_defense_1 = {
+		icon = GFX_decision_generic_fortification
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_0
+			NOT = { 
+				OR = {
+					#has_country_flag = PRO_deep_expanding_defense_0 
+					has_country_flag = PRO_deep_expanding_industry_0
+					has_country_flag = PRO_deep_expanding_housing_0
+				}
+			}
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 25
+		modifier = { civilian_factory_use = 2 }
+		complete_effect = {
+			set_country_flag = PRO_deep_expanding_defense_0
+		}
+		remove_effect = {
+			217 = {
+				add_building_construction = {
+					type = bunker2
+					level = 1
+					instant_build = yes
+					province = 2205
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 2205
+				}
+			}
+			set_country_flag = PRO_deep_expanded_defense_0
+			custom_effect_tooltip = pro_deep_decision_defense_1_tt
+		}
+	}
+	pro_deep_decision_defense_2 = {
+		icon = GFX_decision_generic_fortification
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_defense_0
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 4 }
+		remove_effect = {
+			217 = {
+				add_building_construction = {
+					type = bunker2
+					level = 1
+					instant_build = yes
+					province = 2205
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = PRO_deep_expanded_defense_1
+			custom_effect_tooltip = pro_deep_decision_defense_2_tt
+		}
+	}
+	pro_deep_decision_defense_3 = {
+		icon = GFX_decision_generic_fortification
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_defense_1
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 6 }
+		remove_effect = {
+			217 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3089
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6835
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9048
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 2207
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 2203
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = electricity_generator
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = PRO_deep_expanded_defense_2
+			custom_effect_tooltip = pro_deep_decision_defense_3_tt
+		}
+	}
+	pro_deep_decision_defense_4 = {
+		icon = GFX_decision_generic_fortification
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_defense_2
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 10 }
+		remove_effect = {
+			set_technology = {
+				underground_security_tech = 1
+			}
+			custom_effect_tooltip = pro_deep_decision_defense_4_tt
+		}
+	}
+	pro_deep_decision_industry_1 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_0
+			NOT = { 
+				OR = {
+					has_country_flag = PRO_deep_expanding_defense_0 
+					#has_country_flag = PRO_deep_expanding_industry_0
+					has_country_flag = PRO_deep_expanding_housing_0
+				}
+			}
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 25
+		modifier = { civilian_factory_use = 2 }
+		complete_effect = {
+			set_country_flag = PRO_deep_expanding_industry_0
+		}
+		remove_effect = {
+			217 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 1
+				category = building_tech
+			}
+			set_country_flag = PRO_deep_expanded_industry_0
+			custom_effect_tooltip = pro_deep_decision_industry_1_tt
+		}
+	}
+	pro_deep_decision_industry_2 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_industry_0
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 4 }
+		remove_effect = {
+			217 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = PRO_deep_expanded_industry_1
+			custom_effect_tooltip = pro_deep_decision_industry_2_tt
+		}
+	}
+	pro_deep_decision_industry_3 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_industry_1
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 6 }
+		remove_effect = {
+			217 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = electricity_generator
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			set_country_flag = PRO_deep_expanded_industry_2
+			custom_effect_tooltip = pro_deep_decision_industry_3_tt
+		}
+	}
+	pro_deep_decision_industry_4 = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_industry_2
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 10 }
+		remove_effect = {
+			#add_ideas = pro_ultracite
+			217 = {
+				add_dynamic_modifier = {
+					modifier = PRO_far_son_mine_industry_final
+				}
+			}
+			set_technology = {
+				industry_tech_level_settler = 1
+			}
+			custom_effect_tooltip = pro_deep_decision_industry_4_tt
+		}
+	}
+	pro_deep_decision_housing_1 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_0
+			NOT = { 
+				OR = {
+					has_country_flag = PRO_deep_expanding_defense_0 
+					has_country_flag = PRO_deep_expanding_industry_0
+					#has_country_flag = PRO_deep_expanding_housing_0
+				}
+			}
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 25
+		modifier = { civilian_factory_use = 2 }
+		complete_effect = {
+			set_country_flag = PRO_deep_expanding_housing_0
+		}
+		remove_effect = {
+			217 = {
+				add_manpower = 2130
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			set_country_flag = PRO_deep_expanded_housing_0
+			custom_effect_tooltip = pro_deep_decision_housing_1_tt
+		}
+	}
+	pro_deep_decision_housing_2 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_housing_0
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 4 }
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { 
+						has_technology = underground_ventilation_tech
+					}
+				}
+				set_technology = {
+					underground_ventilation_tech = 1
+				}
+			}
+			else = {
+				217 = {
+					add_manpower = 5000
+				}
+				add_stability = 0.08
+			}
+			set_country_flag = PRO_deep_expanded_housing_1
+			custom_effect_tooltip = pro_deep_decision_housing_2_tt
+		}
+	}
+	pro_deep_decision_housing_3 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_housing_1
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 6 }
+		remove_effect = {
+			add_extra_state_shared_building_slots = 5
+			217 = {
+				add_manpower = 3170
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_stability = 0.025
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = habitation_category
+			}
+			set_country_flag = PRO_deep_expanded_housing_2
+			custom_effect_tooltip = pro_deep_decision_housing_3_tt
+		}
+	}
+	pro_deep_decision_housing_4 = {
+		icon = GFX_decision_hol_inundate_water_lines
+		allowed = {
+			original_tag = PRO
+		}
+		visible = {
+			has_country_flag = PRO_deep_expanded_housing_2
+		}
+		available = {
+			controls_state = 217
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		ai_will_do = {
+			base = 66
+		}
+		fire_only_once = yes
+		highlight_states = highlight_states = {
+			highlight_state_targets = { state = 217 }
+		}
+		days_remove = 50
+		modifier = { civilian_factory_use = 10 }
+		remove_effect = {
+			217 = {
+				add_manpower = 15220
+			}
+			add_extra_state_shared_building_slots = 2
+			add_research_slot = 1
+			custom_effect_tooltip = pro_deep_decision_housing_4_tt
+		}
+	}
+}

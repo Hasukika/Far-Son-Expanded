@@ -1,0 +1,97 @@
+﻿l_english:
+  pro_deepmine_cat:0 "The Mines"
+  #SOUTH PASS MINE
+  pro_mine_decision_1:0 "§YExpand the South Pass Mine§!"
+  pro_mine_decision_1_desc:0 "The South Pass Mine is seat of the Far Son Mole Miners. It serves as a base of operations of their raids into the surrounding area. Over time much of the mine has fallen out of use, old equipment breaking down and the miners shifting their attentions to the surface world. Despite the dire state of the mine it can still serve the boss well, but important decisions need to be made."
+  pro_mine_decision_1_tt:0 "§OUnlocks further development of the South Pass Mine§!"
+  
+  #RESOURCE
+  pro_mine_decision_resource_1:0 "§YAdditional Mining Equipment§!"
+  pro_mine_decision_resource_1_desc:0 "Pre-War the mining corporations were not interested in the regions natural resources, they were only interested in finding the ever-elusive Ultracite. Consequently, the mines of Far Son still contain many riches to be collected. Moving some equipment we collected to the mine will allow us to clear some rubble and also extract the resources and minerals that litter the walls of the mineshafts."
+  pro_mine_decision_resource_1_tt:0 "§RLocks you into the §YResource§! branch for this mine§!"
+  pro_mine_decision_resource_2:0 "§YReactivate Excavation Machines§!"
+  pro_mine_decision_resource_2_desc:0 "Even in their disfiguerd state many miners still know how to operate heavy machinery and should be able to activate some of the old stuff standing around the mines. It will need a bit of fusion energy but should make extraction much easier."
+  pro_mine_decision_resource_2_tt:0 "§O§!"
+  pro_mine_decision_resource_3:0 "Dig Deeper"
+  pro_mine_decision_resource_3_desc:0 "The old mine is running out of space and resources quickly. The moles must dig deeper, for there still lay many riches for them to claim beneath the rocks."
+  pro_mine_decision_resource_3_tt:0 ""
+  pro_mine_decision_resource_4:0 "Extract Ultracite" #Final
+  pro_mine_decision_resource_4_desc:0 "The mine has expanded into unfathomable lenght, it's mineshafts piercing into the earth like roots from a tree. And in the deepest depths of the earth the miners have found their prize: a prime Ultracite vein, ripe for taking."
+  pro_mine_decision_resource_4_tt:0 ""
+  
+  #INDUSTRY
+  pro_mine_decision_industry_1:0 "§YMove In Workbenches§!"
+  pro_mine_decision_industry_1_desc:0 "While the mutated miners like to use a variety of weaponry, from explosive to brute-force, their capabilities in crafting weapons are lacking in many ways. Setting up workbenches in our mine will allow us to make a small assortment of things without relying on scavenging too much."
+  pro_mine_decision_industry_1_tt:0 "§RLocks you into the §YIndustry§! branch for this mine§!"
+  pro_mine_decision_industry_2:0 "§YRepurpose Old Tools§!"
+  pro_mine_decision_industry_2_desc:0 "A great assortment of tools can be found abandoned in the ruins of the old world. Some can be repaired, others repurposed, allowing our artisans to craft ever more complex things."
+  pro_mine_decision_industry_2_tt:0 ""
+  pro_mine_decision_industry_3:0 "§YRestart The Generators§!"
+  pro_mine_decision_industry_3_desc:0 "Electricity Generators were the heart of the mines before the war, without them the mines would flood, run out of air, or otherwise fail. After mutating the dig site's inhabitants do not rely on them anymore, a good thing too, because they are all long broken. Still, fusion energy can be of great use for the Morghorl's plans."
+  pro_mine_decision_industry_3_tt:0 ""
+  pro_mine_decision_industry_4:0 "§YEndless Factory Tunnels§!" #Final#
+  pro_mine_decision_industry_4_desc:0 "Converting entire levels of the mine into massive production facilities will take time, but it frees up a lot of space and grants us the ability to operate a very secured industrial complex."
+  pro_mine_decision_industry_4_tt:0 ""
+  
+  #HOUSING 
+  pro_mine_decision_housing_1:0 "§YExpand The Side Chambers§!"
+  pro_mine_decision_housing_1_desc:0 "After their mutation the miners started living in the mines, started turning the old tunnels into makeshift chambers, filled with whatever amenities they could gather. Tho, the limited space forced very cramped conditions upon the miners. Expanding the mine and creating purpose built quaters for the lesser moleminers can help our society grow in strenght and improve their capabilities."
+  pro_mine_decision_housing_1_tt:0 "§RLocks you into the §YHousing§! branch for this mine§!"
+  pro_mine_decision_housing_2:0 "§YDig Air Vents§!"
+  pro_mine_decision_housing_2_desc:0 "Despite what one might expect, the miners do require air to breathe. Their heavy suits and breathers help filter the air to make it breathable even in the worst conditions, but oxygen intakes still need to reach into the deepest veins of the mines somewhere. Guarding and maintaining the old air purifiers has therefore always been a priority for the miners. Sadly one which becomes fruitless if the mine is to expand deeper into the earth, causing the miners to have serious asphyxiation troubles."
+  pro_mine_decision_housing_2_tt:0 ""
+  pro_mine_decision_housing_3:0 "§YShield The Walls§!"
+  pro_mine_decision_housing_3_desc:0 "While made of solid rock, the walls of the mineshafts are far from protective against the post-apocalyptic wasteland. Invaside critters or toxic substances regularly seep into the tunnels and it would be in our best interests to make sure these incursions end as soon as possible."
+  pro_mine_decision_housing_3_tt:0 ""
+  pro_mine_decision_housing_4:0 "§YUnderground City§!"
+  pro_mine_decision_housing_4_desc:0 "Having made conditions beneath the earth allows us to create an entire society beneath the earth. Something which should make our miners thrive immeasurably."
+  pro_mine_decision_housing_4_tt:0 ""
+  
+  #THE DEEPMINES
+  pro_deep_decision_1:0 "§YExpand the Deepmines§!"
+  pro_deep_decision_1_desc:0 "The Deepmines are one of the only mines still operating regularly in the wasteland. They are staffed by the Dryblowers, mostly just raiders who have taken a liking to the old demolition equipment. If we manage to remove the current occupants, then the large mine offers great opportunity for our miners."
+  pro_deep_decision_1_tt:0 "§OUnlocks further development of the Deepmines§!"
+  
+  #DEFENSE
+  pro_deep_decision_defense_1:0 "§YGuarded Entrances§!"
+  pro_deep_decision_defense_1_desc:0 "The Deepmines are not suitable for any more regular mining, it seems the Dryblowers have picked it clean for all it held. So instead of abandoning such a complex tunnel system, the Boss has decided that it can be turned into our base of operations. Only issue is defending the massive mine. We can start by ordering a few additional patrols to guard the exits."
+  pro_deep_decision_defense_1_tt:0 "§RLocks you into the §YDefense§! branch for this mine§!"
+  pro_deep_decision_defense_2:0 "§YAdditional Patrols§!"
+  pro_deep_decision_defense_2_desc:0 "More patrols allow us to detect intruders more easily and eliminate them. A good thing too, because there's plently of nasty things lurking on the surface."
+  pro_deep_decision_defense_2_tt:0 "§O§!"
+  pro_deep_decision_defense_3:0 "Makeshift Turrets"
+  pro_deep_decision_defense_3_desc:0 "We can add some crude turrets to assist our guards in dealing with any potential attackers. It should make holding and repelling attacks much easier."
+  pro_deep_decision_defense_3_tt:0 ""
+  pro_deep_decision_defense_4:0 "Intricate Defense Network" #Final
+  pro_deep_decision_defense_4_desc:0 "To live underground is easy, but to stay secure is hard. After much consideration the Boss came up with his ultimate strategy: a network of interwoven tunnels, patrol posts, checkpoints and turrets. Something no attacker can get through undetected or unharmed."
+  pro_deep_decision_defense_4_tt:0 ""
+  
+  #INDUSTRY
+  pro_deep_decision_industry_1:0 "§YMove In Workbenches§!"
+  pro_deep_decision_industry_1_desc:0 "While the mutated miners like to use a variety of weaponry, from explosive to brute-force, their capabilities in crafting weapons are lacking in many ways. Setting up workbenches in our mine will allow us to make a small assortment of things without relying on scavenging too much."
+  pro_deep_decision_industry_1_tt:0 "§RLocks you into the §YIndustry§! branch for this mine§!"
+  pro_deep_decision_industry_2:0 "§YRepurpose Old Tools§!"
+  pro_deep_decision_industry_2_desc:0 "A great assortment of tools can be found abandoned in the ruins of the old world. Some can be repaired, others repurposed, allowing our artisans to craft ever more complex things."
+  pro_deep_decision_industry_2_tt:0 ""
+  pro_deep_decision_industry_3:0 "§YRestart The Generators§!"
+  pro_deep_decision_industry_3_desc:0 "Electricity Generators were the heart of the mines before the war, without them the mines would flood, run out of air, or otherwise fail. After mutating the dig site's inhabitants do not rely on them anymore, a good thing too, because they are all long broken. Still, fusion energy can be of great use for the Morghorl's plans."
+  pro_deep_decision_industry_3_tt:0 ""
+  pro_deep_decision_industry_4:0 "§YEndless Factory Tunnels§!" #Final#
+  pro_deep_decision_industry_4_desc:0 "Converting entire levels of the mine into massive production facilities will take time, but it frees up a lot of space and grants us the ability to operate a very secured industrial complex."
+  pro_deep_decision_industry_4_tt:0 ""
+  
+  #HOUSING 
+  pro_deep_decision_housing_1:0 "§YExpand The Side Chambers§!"
+  pro_deep_decision_housing_1_desc:0 "After their mutation the miners started living in the mines, started turning the old tunnels into makeshift chambers, filled with whatever amenities they could gather. Tho, the limited space forced very cramped conditions upon the miners. Expanding the mine and creating purpose built quaters for the lesser moleminers can help our society grow in strenght and improve their capabilities."
+  pro_deep_decision_housing_1_tt:0 "§RLocks you into the §YHousing§! branch for this mine§!"
+  pro_deep_decision_housing_2:0 "§YDig Air Vents§!"
+  pro_deep_decision_housing_2_desc:0 "Despite what one might expect, the miners do require air to breathe. Their heavy suits and breathers help filter the air to make it breathable even in the worst conditions, but oxygen intakes still need to reach into the deepest veins of the mines somewhere. Guarding and maintaining the old air purifiers has therefore always been a priority for the miners. Sadly one which becomes fruitless if the mine is to expand deeper into the earth, causing the miners to have serious asphyxiation troubles."
+  pro_deep_decision_housing_2_tt:0 ""
+  pro_deep_decision_housing_3:0 "§YShield The Walls§!"
+  pro_deep_decision_housing_3_desc:0 "While made of solid rock, the walls of the mineshafts are far from protective against the post-apocalyptic wasteland. Invaside critters or toxic substances regularly seep into the tunnels and it would be in our best interests to make sure these incursions end as soon as possible."
+  pro_deep_decision_housing_3_tt:0 ""
+  pro_deep_decision_housing_4:0 "§YUnderground City§!"
+  pro_deep_decision_housing_4_desc:0 "Having made conditions beneath the earth allows us to create an entire society beneath the earth. Something which should make our miners thrive immeasurably."
+  pro_deep_decision_housing_4_tt:0 ""
+  
+  
