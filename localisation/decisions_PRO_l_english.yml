@@ -1,4 +1,11 @@
 ﻿l_english:
+  #DEFENSE CATEGORY
+  pro_deep_defense_cat:0 "Tunnel Warfare"
+  pro_deep_defense_cat_desc:0 "The Miners lack combat capabilities that allow them to fight on even ground with our foes, we can remedy this disadvantage by making our own territory as well defended as possible.\n\n§OLook on the map for §YDefense§! bolstering §YDecisions§! available in §YEvery Core State§!§!"
+  #Decision
+  pro_deep_defense_decision:0 "Bolster Defense in [FROM.GetName]" 
+  
+  #DEEPMINE CATEGORY
   pro_deepmine_cat:0 "The Mines"
   #SOUTH PASS MINE
   pro_mine_decision_1:0 "§YExpand the South Pass Mine§!"

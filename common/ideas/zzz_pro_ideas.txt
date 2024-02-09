@@ -10,10 +10,58 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				local_resources_factor = 0.25
-				#consumer_goods_factor = -0.1
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.05
-				army_attack_speed_factor = 0.15
+				#army_attack_speed_factor = 0.15
+			}
+		}
+		pro_ultracite_bullet = {
+			picture = moj_saturnite
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_strength_factor = 0.1
+				breakthrough_factor = 0.05
+				army_attack_speed_factor = 0.05
+			}
+		}
+		pro_mining_robot = {
+			picture = generic_protectron_gold
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.08
+				local_resources_factor = 0.05
+			}
+		}
+		pro_vehcile = {
+			picture = vehicle_dump_truck
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				truck_attrition_factor = -0.25
+			}
+			equipment_bonus = {
+				heavy_motorized_equipment_2 = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
 		}
 		pro_chaser_mentality = {

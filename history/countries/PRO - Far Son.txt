@@ -13,7 +13,7 @@ set_technology = {
 	#special_forces_tech_level_settler = 1
 	#special_forces_tech_level_scientific = 1
 	power_armour_tech_level_tribal = 1
-	power_armour_tech_level_settler = 1
+	#power_armour_tech_level_settler = 1
 	#power_armour_tech_level_scientific = 1
 	vehicles_tech_level_tribal = 1
 	#vehicles_tech_level_settler = 1
@@ -51,7 +51,6 @@ set_technology = {
 	raider_reckless_aggression = 1
 	molerat_infantry_unlock_tech = 1
 	spec_ops_equipment_tech_1 = 1
-	underground_industry_tech = 1
 }
 
 if = {
@@ -132,6 +131,7 @@ set_party_name = {
 recruit_character = PRO_mole_boss
 recruit_character = PRO_far_son
 recruit_character = PRO_hurrmgh
+recruit_character = PRO_sister_abraham
 
 add_ideas = {
 	scavenging_law

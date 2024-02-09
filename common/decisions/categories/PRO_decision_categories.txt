@@ -2,8 +2,28 @@ pro_deepmine_cat = {
 	icon = GFX_decision_category_generic_prospect_for_resources
 	visible_when_empty = no
 	visible = {
-			#has_completed_focus = EZE_start
-			original_tag = PRO
-		}
+		#has_completed_focus = EZE_start
+		original_tag = PRO
+	}
 	priority = 285
+}
+pro_deep_defense_cat = {
+	icon = GFX_decision_category_generic_prospect_for_resources
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = FIN_defense_in_depth
+		original_tag = PRO
+	}
+	priority = 286
+	on_map_area = {
+		target_array = core_states
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+		name = pro_deep_defense_cat
+		zoom = 300
+		#state = 1033
+	}
 }

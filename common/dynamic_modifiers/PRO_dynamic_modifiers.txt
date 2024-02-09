@@ -1,8 +1,29 @@
+PRO_far_son_defense_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_pickaxe
+	
+	army_core_defence_factor = 0.05
+	army_speed_factor_for_controller = 0.15
+	attrition_for_controller = -0.1
+	local_supplies_for_controller = 0.15
+	enemy_army_speed_factor = -0.15
+	
+    remove_trigger = {  # ROOT refers to the state on which the modifier is added
+		ROOT = { 
+			controller = {
+				OR = {
+					NOT = { original_tag = PRO }
+					is_subject = yes
+				}
+			}
+		}
+	}
+}
 PRO_far_son_mine_industry_final = {
 	enable = { always = yes }
 	icon = GFX_idea_generic_pickaxe
 	local_intel_to_enemies = -0.5
-	industry_air_damage_factor = 0.5
+	industry_air_damage_factor = -0.5
 	local_supplies = 0.1
 	local_building_slots = 15
 	production_speed_buildings_factor = 0.2
