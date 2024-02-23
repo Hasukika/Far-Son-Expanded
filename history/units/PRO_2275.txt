@@ -1,0 +1,119 @@
+﻿division_template = {
+	name = "Miner Militia"
+	priority = 0
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Far Son Shaman-Rangers"
+
+	regiments = {
+		spec_ops = { x = 0 y = 0 }
+		spec_ops = { x = 0 y = 1 }
+		spec_ops = { x = 0 y = 2 }
+		spec_ops = { x = 1 y = 0 }
+		spec_ops = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Mole Miners"
+	regiments = {
+		molerat_infantry = { x = 0 y = 0 }
+		molerat_infantry = { x = 0 y = 1 }
+		molerat_infantry = { x = 1 y = 0 }
+		molerat_infantry = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Mole Menace"
+	template_counter= 19
+	regiments = {
+		molerat_infantry = { x = 0 y = 0 }
+		molerat_infantry = { x = 0 y = 1 }
+		molerat_infantry = { x = 0 y = 2 }
+	}
+	is_locked = yes
+}
+
+units = {
+	division = {
+		name = "Montague's Elite"
+		location = 8342
+		division_template = "Far Son Shaman-Rangers"
+		start_experience_factor = 0.16
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Metal Miners"
+		location = 12482
+		division_template = "Mole Miners"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.80
+	}
+	division = {
+		name = "South Pass Miners"
+		location = 12499
+		division_template = "Mole Miners"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Montague's Mongers"
+		location = 12488
+		division_template = "Far Son Shaman-Rangers"
+		start_experience_factor = 0.27
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Farson Miners"
+		location = 1712
+		division_template = "Mole Miners"
+		start_experience_factor = 0.22
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Glowing Miners"
+		location = 12487
+		division_template = "Mole Miners"
+		start_experience_factor = 0.17
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Glowing Miners"
+		location = 12505
+		division_template = "Mole Miners"
+		start_experience_factor = 0.17
+		start_equipment_factor = 1.0
+	}
+}
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = melee_equipment_1
+			creator = "PRO"
+		}
+		requested_factories = 1
+		progress = 0.90
+		efficiency = 30
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = molerat_equipment_1
+			creator = "PRO"
+		}
+		requested_factories = 1
+		progress = 0.90
+		efficiency = 30
+	}
+}

@@ -1,4 +1,5 @@
 ﻿l_english:
+  #POLITICAL PARTIES
   PRO_elite_pt:0 "A.B. Mining"
   PRO_elite_pt_long:0 "Alton Bourges Mining Concern"
   PRO_ruler_pt:0 "Morghorl's Gang"
@@ -8,9 +9,18 @@
   PRO_people_pt:0 "Far Son Miners"
   PRO_people_pt_long:0 "Far Son Miners Council"
   
+  #CHARACTER NAME
   PRO_sister_abraham_name:0 "Sister Abraham"
   PRO_sister_abraham_desc:0 "" 
-  
+  #CURRENCY
+  PRO_currency_scrip_tt:0 "Changes currency to: §YScrip§!\n\nEffective Change:\nPassive Caps: §G+2§!\nResource Gain Efficiency: §G+5.00%§!\nConsumer Goods Factor: §Y1.0%§!"
+  capdisplayscrip:0 "GFX_bottle_cap_display_scrip"
+  scrip:0 "Scrip"
+  currencyscrip:0 "Scrip"
+  currencyscrip_info:0 "Modifiers:\n   Passive Caps: §G+12§!\n   Resource Gain Efficiency: §G+5.00%§!\n   Consumer Goods Factor: §Y1.0%§!\n\nScrip is a rare resource valued highly by Mole Miners for unknown reasons. Its trade extends to even those unmutated outsiders and builds the cornerstone of the Far Son economy."
+  capdisplayscriptxt:0 "£GFX_currency_PRO_text_icon"
+  accept_scrip:0 "Far Son Ties"
+  #IDEAS
   pro_ultracite:0 "Ultracite Mining"
   pro_ultracite_bullet:0 "Ultracite-Lined Bullets"
   pro_mining_robot:0 "Mining Robots"
@@ -23,23 +33,32 @@
   pro_army_stuff_4:0 "Deeper Tunnels"
   wyoming_idea_snake_of_wyoming_1:0 "Far Son's Finest"
   wyoming_idea_snake_of_wyoming_2:0 "Far Son's Finest"
+  pro_kid_named_spiritualconfusion:0 "Spiritual Confusion"
+  pro_kid_named_spiritualconfusion_lesser:0 "Spiritual Tranquility"
+  #DYNAMIC MODIFIERS
   PRO_far_son_mine_industry_final:0 "Factory Tunnels"
   PRO_far_son_defense_modifier:0 "Deep Defense Network"
   
+  #TOOLTIPS
+  PRO_nightkin_available_tt:0 "§YThe Nightkin have established themselves§!"
+  PRO_nightkin_focus_tree_tt:0 "Unlocks A New §YFocus Tree§!"
   wyoming_idaho_claim_tt:0 "We will §Cgain claims§! on all of §GIdaho§!!"
   PRO_idaho_claim_tt:0 "Should we take in the §cNightkin§! and conquer §CHeavens Gate§! an event will occur."
-  PRO_every_owned_state_tt:0 "§YEver core State:§!"
+  PRO_every_owned_state_tt:0 "§YEvery core State§!:\n   Add §G1§! Building Slots.\n   Add §G2§! §YInfrastructure§!."
   PRO_every_state_bunker_tt:0 "Add §G1§! §YOutpost§! in §Yevery Tile§!"
+  PRO_unlock_menace_tt:0 "Unlocks §YDecisions§! to §YInfiltrate§! our enemies and attack from §YBelow§Y"
   PRO_defense_network_tt:0 "Unlocks §YDecisions§! to easier defend our §YCore States§!"
   PRO_core_impassable_tt:0 "We will §Ygain cores§! on every §RImpassable§! state!"
-  PRO_20_percent_coring_cost_decrease_tt: "Gain a permanent §G10%§! decrease in coring costs."
+  PRO_40_percent_coring_cost_decrease_tt: "Gain a permanent §G40%§! decrease in coring costs."
   
+  #LEADER_TRAITS
   pro_morghol_gaming:0 "Morghorl's Cunning"
   pro_morghol_generic:0 "Greedy"
   pro_morghol_advanced:0 "Insatiable"
   pro_sister_abraham_trait_1:0 "§RHoly Fury§!"
   pro_sister_abraham_trait_2:0 "§CDivine Mercy§!"
   
+  #FORMABLES
   PRO_mining_formable_people:0 "The Deep"
   PRO_mining_formable_people_ADJ:0 "Deep"
   PRO_mining_formable_people_DEF:0 "The Deep"
@@ -65,19 +84,47 @@
   PRO_horde_formable_intellectuals:0 "New Far Son"
   PRO_horde_formable_intellectuals_ADJ:0 "Far Son"
   PRO_horde_formable_intellectuals_DEF:0 "New Far Son"
- 
+  
+  PRO_spirit_flock_people:0 "The Spirit Flock"
+  PRO_spirit_flock_people_ADJ:0 "Spirit Flock"
+  PRO_spirit_flock_people_DEF:0 "The Spirit Flock"
+  PRO_spirit_flock_ruler:0 "The Spirit Flock"
+  PRO_spirit_flock_ruler_ADJ:0 "Spirit Flock"
+  PRO_spirit_flock_ruler_DEF:0 "The Spirit Flock"
+  PRO_spirit_flock_elites:0 "The Spirit Flock"
+  PRO_spirit_flock_elites_ADJ:0 "Spirit Flock"
+  PRO_spirit_flock_elites_DEF:0 "The Spirit Flock"
+  PRO_spirit_flock_intellectuals:0 "The Spirit Flock"
+  PRO_spirit_flock_intellectuals_ADJ:0 "Spirit Flock"
+  PRO_spirit_flock_intellectuals_DEF:0 "The Spirit Flock"
+  
+  #EVENTS
   nf_pro.4.t:0 "The Hellpit"
-  nf_pro_4.d:0 ""
-  nf_pro_4.a:0 ""
+  nf_pro.4.d:0 "Morghorl had heard the rumors. According to local legend  there was a cave, eternally spewing fire, hidden in the mountains. Burham Springs was the name of this mysterious and dangerous place, from which noone had ever returned alive.\nBut Morghorl had also heard the tales of it's inhabitants: ghastly mutants, deadly plants, and, most interesting to Morghorl, rare minerals. Yes, the Boss had his eyes set on this prize. What meager humans couldn't accomplish, his rough and tough Mole Miners surely could.\n\nWasn't long that a small pack of glowing miners made their way into the mountains and trodded the trails of those foolish adventurers that had not been up to the task of surviving the Springs.\nThe group soon found their objective, a number of black holes gaping under a ridge, and out of them rang the most horrifiying noises. The heat too drastically increased around the entrance, hinting at the hellfire that burned in the depths. This dreadful sight couldn't deter the miners tough. They knew all too well their Boss didn't accept cowards.\nDeeper and deeper they descended into the cave, fighting all kinds of mutated creatures along the way.\nDown there, they discovered plenty of spectacular stuff, and when they reported back to Morghorl, he would praise them greatly.\n\nBut more importantly, the Boss was now looking into harvesting Burham Springs treasures for his own purposes..."
+  nf_pro.4.a:0 "A new home for the mutants..."
   
-  nf_pro.5.t:0 "Morghorl's Big Choice"
-  nf_pro.5.d:0 ""
-  nf_pro.5.a:0 ""
+  nf_pro.5.t:0 "Boss' Big Decision"
+  nf_pro.5.d:0 "The mining siren blared into the dark tunnels, summoning all dwellers to a meeting with the boss. They didn't know what was up, but usually these events were about Morghorl announcing a new big raid or him boasting his wealth. Regardless of their other plans for the day, they all grudingly made their way down to the boss's palace.\n\nDown in the lower levels of the mine, Morghorls "Palace" was a remarkable sight: chiseled into the black stone, it boasted sentry turrets, electric lighting, the walls of the large cave foyer decorated with the spoils of Morghorls' conquests. At the very end of the entrance hall where all the miners gathered there was a small hole in the upper part of the wall and a makeshift platform underneath. All eyes focused on this spot, the miners unleashing a chorus of grunts and chitters as they awaited their boss emerging from his lair.\nWhen Morghorl stepped out from the dark, he was greeted by thundrous roaring and cheering, mostly since no miner wanted to get on his bad side.\nBut Morghorl seemed different today, less decisive in his language, unclearer in his message; something wasn't right. The truth was that Morghorl stood at a crossroads, his realm stretched far already, and now it was to be decided where it would expand into. Perhaps the mineral rich mountains of Colorado, or maybe the lightly defended valleys of Utah?\nIt was a tough choice, therefore the Boss tried something he hadn't ever done before: a vote. He'd stir up all the miners with a speech about his grand ambition of expanding, but leave it to them to decide what region to focus.\n\nAfter much quarrel and many muffled Ayes and Nays, Morghorl proclaimed his decision:"
+  nf_pro.5.a:0 "Utah!"
+  nf_pro.5.b:0 "Colorado!"
   
-  nf_pro.6.t:0 "Strange Visitors"
-  nf_pro.6.d:0 ""
-  nf_pro.6.a:0 ""
+  nf_pro.6.t:0 "Strange Visitors" #Nightkin Establish
+  nf_pro.6.d:0 "Usually, the very territorial miners shot anyone on sight they didn't recognise. Was mighty strange therefore, when the Boss heard of some Supermutants living in the dark mountains of Far Son without the Moles hunting them down. He complained and shouted at his commanders to take care of them, but the Supervisors returned only with bad news.\nIt turned out the mutants had technology on their side; utilizing Stealth Boys they evaded any ambush or attack the mole miners prepared.\nInitially Morghorl was dead set on destroying the cave dwellers for daring to disrespect his realm. But he also didn't want to spend too many resources on getting rid of these 'Nightkin'. And since they didn't seem too hostile, Morghorl sent out a few of his goons to figure out what their deal was.\nIt turned out that these Nightkin were a part of a of 'religous group' who had built a refuge for their kin in the mountains, where they wanted to be left alone by the dangers of the wasteland. Their leader was named 'Sister Abraham'. Morghorl, though intially sceptial, slowly grew on her and was impressed by her willingness to share her belongings. It made seizing them by force seem much less attractive, it also didn't help that the Nightkin were armed to the teeth and seemed more than willing to put up a fight. Besides, Morghorl saw that their leader wasn't only kind-hearted, but also had a tendency of sudden agressive outbursts and showed great skill as a tactician. This erratic behaviour casted doubts on Morghorl's mind. He wasn't entirely sure how to handel the situation. Still, he made his decision..."
+  nf_pro.6.a:0 "The mole the merrier"
+  nf_pro.6.b:0 "Fanatics should stay away"
   
-  nf_pro.6.t:0 "Strange Visitors"
-  nf_pro.6.d:0 ""
-  nf_pro.6.a:0 ""
+  nf_pro.7.t:0 "The Sister's Visions" #Nightkin Event 2
+  nf_pro.7.d:0 ""
+  nf_pro.7.a:0 ""
+  nf_pro.7.b:0 ""
+  
+  nf_pro.8.t:0 "The Sister's Revelation"
+  nf_pro.8.d:0 ""
+  nf_pro.8.a:0 ""
+  nf_pro.8.b:0 ""
+  
+  nf_pro.9.t:0 "The Reigns In Their Hands"
+  nf_pro.9.d:0 "Things seemed alright for Sister Abraham; her Nightkin were prospering, the moles left them alone, and only the occasional external danger would require joining forces with Morghorl. However, things were soon to change for the devoted nun.\nAs she watched the Mole Miners go about their work, she could see their endless gluttony and greed on full display. Something that became only worse and worse over time as Morghorl's miners amassed more wealth and loot for themselves and their boss alike. Her inner voices started calling for action, claiming it unacceptable for her to stay idle. Abraham repressed these thoughts for a while, but things only got worse. Soon, the other Nightkin reported their belongings vanishing and their religous 'artifacts' going missing too. The final nail in the coffin was when Abraham caught a group of Mole Miners mining right under her cave, trying to plunder it of any resources and valuables.\nThe sister knew she had to take matters into her own hand if an end to the madness was ever achievable.\n\nShe sensed that the loyalty of the moles wasn't as strong as Morghorl's iron fist led to believe. Maybe, just maybe, taking out the Boss could lead to a bloodless power transition."
+  nf_pro.9.a:0 "§CWe must protect ourself.§!"
+  nf_pro.9.b:0 "§RThey must feel our fury!§!"
+  

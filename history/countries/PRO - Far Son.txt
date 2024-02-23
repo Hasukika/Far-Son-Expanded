@@ -76,7 +76,7 @@ if = {
 	}
 }
 
-set_stability = 0.33
+set_stability = 0.40
 set_war_support = 0.46
 set_research_slots = 3
 #set_country_flag = is_raider_nation
@@ -132,6 +132,7 @@ recruit_character = PRO_mole_boss
 recruit_character = PRO_far_son
 recruit_character = PRO_hurrmgh
 recruit_character = PRO_sister_abraham
+recruit_character = PRO_goliath
 
 add_ideas = {
 	scavenging_law

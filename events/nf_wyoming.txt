@@ -211,7 +211,7 @@ country_event = { #Second History - Prospectors
 	}
 }
 
-	country_event = { #Flavor Event - Prospectors
+country_event = { #Flavor Event - Prospectors
 	id = nf_pro.3
 	title = nf_pro.3.t
 	desc = nf_pro.3.d
@@ -219,153 +219,197 @@ country_event = { #Second History - Prospectors
 
 	is_triggered_only = yes
 
-		option = {
-			name = nf_pro.3.a
-			random_list = {
-				25 = {
-					random_owned_state = {
-						add_resource = {
-							type = energy
-							amount = 3
-						}
+	option = {
+		name = nf_pro.3.a
+		random_list = {
+			25 = {
+				random_owned_state = {
+					add_resource = {
+						type = energy
+						amount = 3
 					}
 				}
-				25 = {
-					random_owned_state = {
-						add_resource = {
-							type = circuitry
-							amount = 3
-						}
+			}
+			25 = {
+				random_owned_state = {
+					add_resource = {
+						type = circuitry
+						amount = 3
 					}
 				}
-				25 = {
-					random_owned_state = {
-						add_resource = {
-							type = composites
-							amount = 3
-						}
+			}
+			25 = {
+				random_owned_state = {
+					add_resource = {
+						type = composites
+						amount = 3
 					}
 				}
-				25 = {
-					random_owned_state = {
-						add_resource = {
-							type = advanced
-							amount = 3
-						}
+			}
+			25 = {
+				random_owned_state = {
+					add_resource = {
+						type = advanced
+						amount = 3
 					}
 				}
 			}
 		}
 	}
+}
 	
 	#FAR SON MOD CONTENT
-	country_event = { #Burham
+country_event = { #Burham
 	id = nf_pro.4
 	title = nf_pro.4.t
 	desc = nf_pro.4.d
-	picture = GFX_event_alton_bourges
+	picture = GFX_event_vipers_snek
 
 	is_triggered_only = yes
 
-		option = {
-			name = nf_pro.4.a
-			add_manpower = -100
-		}
+	option = {
+		name = nf_pro.4.a
+		add_manpower = -100
 	}
+}
 	
-	country_event = { #Boss' Biggest Choice
+country_event = { #Boss' Biggest Choice
 	id = nf_pro.5
 	title = nf_pro.5.t
 	desc = nf_pro.5.d
-	picture = GFX_event_alton_bourges
+	picture = GFX_event_cowboy_hat
 
 	is_triggered_only = yes
 
-		option = {
-			name = nf_pro.5.a
-			add_stability = 0.05
-		}
+	option = {
+		name = nf_pro.5.a
+		complete_national_focus = pro_utah_expansion
 	}
+	option = {
+		name = nf_pro.5.b
+		complete_national_focus = pro_colorado_expansion
+	}
+}
 	
-	country_event = { #Nightkin From Idaho
+country_event = { #Nightkin From Idaho
 	id = nf_pro.6
 	title = nf_pro.6.t
 	desc = nf_pro.6.d
-	picture = GFX_event_alton_bourges
+	picture = GFX_event_HEA_bishop1
 
 	is_triggered_only = yes
 
-		option = {
-			name = nf_pro.6.a
-			add_field_marshal_role = {
-				character = PRO_sister_abraham
-				desc = ""
-				traits = {
-					hot_blooded_trait
-					strong_trait
-					enduring_trait
-				}
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 1
-				logistics_skill = 5
+	option = {
+		name = nf_pro.6.a
+		add_field_marshal_role = {
+			character = PRO_sister_abraham
+			desc = ""
+			traits = {
+				hot_blooded_trait
+				strong_trait
+				enduring_trait
 			}
-			add_manpower = 56
-			set_country_flag = PRO_sister_abraham_recruited
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 4
 		}
-		
-		option = {
-			name = nf_pro.6.b
-			add_stability = 0.025
+		add_manpower = 56
+		set_country_flag = PRO_sister_abraham_recruited
+		set_technology = { super_mutant_nightkin_tech = 1 }
+		hidden_effect = {
+			country_event = {
+				id = nf_pro.9
+				days = 50
+			}
 		}
+	}	
+	option = {
+		name = nf_pro.6.b
+		add_stability = 0.025
 	}
+}
 	
-	country_event = { #Nightkin Coup
+country_event = { #Nightkin Event 2
 	id = nf_pro.7
 	title = nf_pro.7.t
 	desc = nf_pro.7.d
-	picture = GFX_event_alton_bourges
-	
-	trigger = {
-		tag = PRO
-		controls_state = 1384
-		has_completed_focus = FIN_expand_production_lines
-		has_country_flag = PRO_sister_abraham_recruited
-	}
-	
-	fire_only_once = yes
+	picture = GFX_event_HEA_bishop2
 
-		option = {
-			name = nf_pro.7.a
-			1384 = {
-				add_core_of = PRO
-			}
-			remove_country_leader_role = {
-				character = PRO_mole_boss
-				ideology = warlordship
-			}
-			add_country_leader_role = {
-				character = PRO_sister_abraham
-				promote_leader = yes
-				country_leader = {
-					ideology = warlordship
-					expire = "3000.1.1.1"
-					desc = PRO_sister_abraham_desc
-					traits = {
-						pro_sister_abraham_trait_1
-					}
-				}
-			}
-		}
-		
-		option = {
-			name = nf_pro.7.b
+	is_triggered_only = yes
+
+	option = {
+		name = nf_pro.7.a
+		add_stability = -0.05
+		hidden_effect = {
+			#country_event = {
+			#	id = nf_pro.8
+			#	days = 40
+			#}
 		}
 	}
-	#FAR SON MOD CONTENT END
+}
 	
-	country_event = { #Arapaho Event
+country_event = { #Nightkin Event 3
+	id = nf_pro.8
+	title = nf_pro.8.t
+	desc = nf_pro.8.d
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 75
+		}
+		name = nf_pro.8.a
+		add_stability = -0.05
+		custom_effect_tooltip = PRO_nightkin_focus_tree_tt
+	}
+		
+	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = nf_pro.8.b
+		PRO_sister_abraham = {
+			retire = yes
+		}
+		add_stability = 0.05
+	}
+}
+country_event = { #Nightkin Start Of Tree
+	id = nf_pro.9
+	title = nf_pro.9.t
+	desc = nf_pro.9.d
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_pro.9.a
+		add_stability = 0.05
+		add_war_support = -0.05
+		complete_national_focus = pro_silent_giant
+		set_country_flag = PRO_nightkin_established
+	}
+	
+	option = {
+		name = nf_pro.9.a
+		add_stability = -0.05
+		add_war_support = 0.05
+		complete_national_focus = pro_silent_giant
+		set_country_flag = PRO_nightkin_established
+	}
+}
+
+#FAR SON MOD CONTENT END	
+country_event = { #Arapaho Event
 	id = nf_sie.4
 	title = nf_sie.4.t
 	desc = nf_sie.4.d

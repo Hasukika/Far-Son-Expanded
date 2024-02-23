@@ -8,10 +8,10 @@ pro_deepmine_cat = {
 	priority = 285
 }
 pro_deep_defense_cat = {
-	icon = GFX_decision_category_generic_prospect_for_resources
+	icon = GFX_decision_category_generic_mountain_fortification
 	visible_when_empty = yes
 	visible = {
-		has_completed_focus = FIN_defense_in_depth
+		has_completed_focus = pro_deep_defense
 		original_tag = PRO
 	}
 	priority = 286
@@ -26,4 +26,26 @@ pro_deep_defense_cat = {
 		zoom = 300
 		#state = 1033
 	}
+}
+pro_abraham_cat = {
+	icon = GFX_decision_category_cross
+	visible_when_empty = no
+	visible = {
+		has_country_flag = PRO_abraham_decisions_active
+		has_country_leader = {
+			character = PRO_sister_abraham
+			ruling_only = yes
+		}
+		original_tag = PRO
+	}
+	priority = 287
+}
+pro_menace_cat = {
+	icon = GFX_decision_category_infiltration
+	visible_when_empty = no
+	visible = {
+		has_completed_focus = pro_morghorl_means
+		original_tag = PRO
+	}
+	priority = 289
 }
