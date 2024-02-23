@@ -2,7 +2,7 @@ leader_traits = {
 	pro_morghol_generic = {
 		random = no
 		local_resources_factor = -0.05
-		stability_factor = 0.05
+		coring_raider_caps_per_infrastructure_mod = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10,9 +10,11 @@ leader_traits = {
 	pro_morghol_advanced = {
 		random = no
 		local_resources_factor = -0.085
-		stability_factor = 0.05
-		army_speed_factor = 0.1
-		terrain_penalty_reduction = 0.1
+		#stability_factor = 0.05
+		#army_speed_factor = 0.1
+		#terrain_penalty_reduction = 0.1
+		coring_raider_caps_per_infrastructure_mod = 10
+		#coring_raider_command_power_per_infrastructure_mod = 5
 		ai_will_do = {
 			factor = 1
 		}

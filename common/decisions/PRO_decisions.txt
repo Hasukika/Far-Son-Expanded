@@ -1,3 +1,229 @@
+pro_abraham_cat = {
+	pro_abraham_trait_swap = { #Swaps Ruler Decision Every 120 days
+		icon = GFX_decision_cross
+		
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 120
+		#fire_only_once = yes
+		timeout_effect = {
+			if = { #Check which one she has
+				limit = {
+					PRO_sister_abraham = {
+						has_trait = pro_sister_abraham_trait_1
+					}
+				}
+				swap_ruler_traits = {
+					remove = pro_sister_abraham_trait_1
+					add = pro_sister_abraham_trait_2
+				}
+			}
+			else = {
+				swap_ruler_traits = {
+					remove = pro_sister_abraham_trait_2
+					add = pro_sister_abraham_trait_1
+				}
+			}
+			activate_mission = pro_abraham_trait_swap
+		}
+	}
+	pro_evil_decision_1 = {
+		icon = GFX_decision_skull
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_1
+			}
+		}
+		cost = 25
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = melee_equipment_2
+				amount = 150
+				producer = USA
+			}
+		}
+	}
+	pro_evil_decision_2 = {
+		icon = GFX_decision_skull
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_1
+			}
+		}
+		cost = 50
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = PRO }
+				#is_valid_state_for_civilian_factory = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	pro_evil_decision_3 = {
+		icon = GFX_decision_skull
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_1
+			}
+		}
+		cost = 25
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			army_experience = 10
+		}
+	}
+	pro_evil_decision_4 = {
+		icon = GFX_decision_skull
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_1
+			}
+		}
+		cost = 25
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			add_war_support = 0.025
+		}
+	}
+	pro_good_decision_1 = {
+		icon = GFX_decision_cookie
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_2
+			}
+		}
+		cost = 25
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			add_stability = 0.025
+		}
+	}
+	pro_good_decision_2 = {
+		icon = GFX_decision_cookie
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_2
+			}
+		}
+		cost = 50
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = PRO }
+				#is_valid_state_for_civilian_factory = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	pro_good_decision_3 = {
+		icon = GFX_decision_cookie
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_2
+			}
+		}
+		cost = 25
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = PRO }
+				#is_valid_state_for_civilian_factory = yes
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	pro_good_decision_4 = {
+		icon = GFX_decision_cookie
+		available = {	
+		}
+		visible = {
+			PRO_sister_abraham = {
+				has_trait = pro_sister_abraham_trait_2
+			}
+		}
+		cost = 25
+		days_remove 5
+		days_re_enable = 130
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			set_temp_variable = {
+				caps_to_add = 25
+			}
+			add_caps = yes
+		}
+	}
+}
 pro_deep_defense_cat = {
 	pro_deep_defense_decision = {
 		icon = GFX_decision_generic_mountain_fortification
@@ -1104,6 +1330,1026 @@ pro_deepmine_cat = {
 			}
 			add_research_slot = 1
 			custom_effect_tooltip = pro_deep_decision_housing_4_tt
+		}
+	}
+}
+pro_menace_cat = {
+	PRO_ignite_uprising = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			original_tag = PRO
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRO_uprising_available_tt
+				NOT = {
+					has_country_flag = PRO_moles_soon_to_die
+				}
+			}
+			FROM = {
+				has_civil_war = no
+				any_controlled_state = {
+					is_in_home_area = yes
+					is_capital = no
+				}
+			}
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+			has_equipment = {
+			    molerat_equipment_1 > 4999
+			}
+			hidden_trigger = {
+				any_controlled_state = {
+					NOT = { has_state_flag = mole_from_below }
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				exists = yes
+				has_war_with = ROOT
+				NOT = { is_subject_of = ROOT }
+				any_controlled_state = {
+					is_in_home_area = yes
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 45
+
+		modifier = {
+			
+		}
+ 
+		visible = {
+			tag = PRO
+			has_completed_focus = pro_morghorl_means
+			FROM = {
+				exists = yes
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = PRO_moles_soon_to_die
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -500
+			}
+			add_equipment_to_stockpile = {
+			    type = molerat_equipment
+			    amount = -5000
+			}
+			hidden_effect = {
+				FROM = {
+					set_country_flag = PRO_ignite_moles_timer_flag
+					activate_mission = PRO_ignite_uprising_timer_mission
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				activate_mission = PRO_moles_go_die_mission
+			}
+			if = {
+				limit = {
+					FROM = {
+						any_controlled_state = {
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 500
+								}
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_controlled_by = FROM
+						is_in_home_area = yes
+						is_capital = no
+						NOT = { has_state_flag = mole_from_below }
+						any_state = {
+							is_controlled_by = ROOT
+							NOT = { has_state_flag = mole_from_below }
+							distance_to = {
+								target = PREV
+								value < 500
+							}
+						}
+					}
+					set_state_flag = mole_from_below
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						any_controlled_state = {
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_controlled_by = FROM
+						is_in_home_area = yes
+						is_capital = no
+						NOT = { has_state_flag = mole_from_below }
+						any_state = {
+							is_controlled_by = ROOT
+							NOT = { has_state_flag = mole_from_below }
+							distance_to = {
+								target = PREV
+								value < 750
+							}
+						}
+					}
+					set_state_flag = mole_from_below
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else = {
+				random_state = {
+					limit = {
+						is_controlled_by = FROM
+						is_in_home_area = yes
+						is_capital = no
+						NOT = { has_state_flag = mole_from_below }
+						any_state = {
+							is_controlled_by = ROOT
+							NOT = { has_state_flag = mole_from_below }
+						}
+					}
+					set_state_flag = mole_from_below
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 4 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 500
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 7 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 500
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 11 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 500
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 500
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 19 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 500
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 500
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = mole_from_below }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = mole_from_below }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = mole_from_below }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = mole_from_below }
+							}
+						}
+						set_state_flag = mole_from_below
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Mole Menace\" start_experience_factor = 0.5" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	PRO_ignite_uprising_timer_mission = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 45
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = PRO_ignite_moles_timer_flag
+		}
+
+		cancel_if_not_visible = no
+
+		is_good = yes
+
+		timeout_effect = {
+			clr_country_flag = PRO_ignite_moles_timer_flag 
+			custom_effect_tooltip = PRO_ignite_moles_timer_mission_tt
+		}
+	}
+	PRO_moles_go_die_mission = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 60
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = PRO_moles_soon_to_die
+		}
+
+		cancel_if_not_visible = no
+
+		is_good = yes
+
+		timeout_effect = {
+			delete_unit = {
+				division_template = "Mole Menace"
+			}
+			clr_country_flag = PRO_moles_soon_to_die
 		}
 	}
 }

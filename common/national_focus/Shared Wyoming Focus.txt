@@ -146,6 +146,10 @@ focus_tree = {
 			}
 			add_caps = yes
 			add_political_power = 100
+			custom_effect_tooltip = PRO_currency_scrip_tt
+			hidden_effect = {
+				add_ideas = currencyscrip
+			}
 		}
 	}
 
@@ -249,7 +253,7 @@ focus_tree = {
 
 	focus = {
 		id = wyoming_mole_plant
-		icon = GFX_goal_pickaxe
+		icon = GFX_goal_PRO_pickaxe
 		cost = 45
 		prerequisite = {
 			focus = wyoming_mole_factory_1
@@ -409,29 +413,29 @@ focus_tree = {
 			focus = wyoming_mole_manpower_dos
 		}
 		available = {
-			has_completed_focus = pro_the_wyoming_heirs_2
+			#has_completed_focus = pro_wyoming_dominated
 		}
 		relative_position_id = wyoming_mole_plant
 		x = 0
 		y = 1
 		completion_reward = {
 			add_country_leader_trait = pro_morghol_gaming
-			effect_tooltip = {
-				custom_effect_tooltip = PRO_every_owned_state_tt
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-			}
+			custom_effect_tooltip = PRO_every_owned_state_tt
+			#effect_tooltip = {
+			#	add_extra_state_shared_building_slots = 2
+			#	add_building_construction = {
+			#		type = infrastructure
+			#		level = 2
+			#		instant_build = yes
+			#	}
+			#}
 			hidden_effect = {
 			every_owned_state = {
 				if = {
 					limit = {
 						is_core_of = PRO
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = infrastructure
 						level = 2
@@ -1002,16 +1006,16 @@ focus_tree = {
 			custom_effect_tooltip = wyoming_idea_tt
 			hidden_effect = {
 				remove_ideas = {
-					idea = pro_army_stuff_1
+					pro_army_stuff_1
 				}
 				remove_ideas = {
-					idea = pro_army_stuff_2
+					pro_army_stuff_2
 				}
 				remove_ideas = {
-					idea = pro_army_stuff_3
+					pro_army_stuff_3
 				}
 				remove_ideas = {
-					idea = pro_army_stuff_4
+					pro_army_stuff_4
 				}
 				if = {
 					limit = {
@@ -1043,7 +1047,7 @@ focus_tree = {
 			random_owned_state = {
 				limit = {
 					NOT = { is_capital = yes }
-					is_core = yes
+					is_core_of = PRO
 					is_valid_state_for_2_arms_factories = yes
 				}
 				add_extra_state_shared_building_slots = 4
@@ -1492,7 +1496,7 @@ focus_tree = {
 	##██║░╚═╝░██║╚█████╔╝███████╗███████╗
 
 	focus = {
-		id = FIN_increase_military_budget
+		id = pro_wyoming_dominated
 		icon = GFX_goal_PRO_morghol
 
 		x = 0
@@ -1524,13 +1528,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_suomen_maavoimat
+		id = pro_mole_tide
 		icon = GFX_goal_generic_war_focus
-		prerequisite = { focus = FIN_increase_military_budget }
+		prerequisite = { focus = pro_wyoming_dominated }
 
 		x = -6
 		y = 1
-		relative_position_id = FIN_increase_military_budget
+		relative_position_id = pro_wyoming_dominated
 		cost = 45
 		available = {
 		}
@@ -1552,37 +1556,25 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = FIN_operation_kilpapurjehdus
-		icon = GFX_goal_mutant_nightkin
-		prerequisite = { focus = FIN_suomen_maavoimat }
-
-		x = -2
-		y = 1
-		relative_position_id = FIN_suomen_maavoimat
-		cost = 45
-
-		available = {
-		}
-
-		completion_reward = {
-			country_event = nf_pro.6
-			set_technology = { super_mutant_nightkin_tech = 1 }
-		}
-	}
 
 	focus = {
-		id = FIN_extra_refresher_exercises
+		id = pro_deeper_mines
 		icon = GFX_goal_generic_f76_player2
-		prerequisite = { focus = FIN_suomen_maavoimat }
+		prerequisite = { focus = pro_mole_tide }
 
 		x = 0
 		y = 1
-		relative_position_id = FIN_suomen_maavoimat
+		relative_position_id = pro_mole_tide
 		cost = 45
 		available = {
 		}
 
+		bypass = {
+            DRY = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		
 		completion_reward = {
 			DRY = {
 				ROOT = {
@@ -1593,17 +1585,23 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_the_cold_front
+		id = pro_black_canyon
 		icon = GFX_goal_TTM_YMP_Flag
-		prerequisite = { focus = FIN_extra_refresher_exercises }
+		prerequisite = { focus = pro_deeper_mines }
 
 		x = -2
 		y = 1
-		relative_position_id = FIN_extra_refresher_exercises
+		relative_position_id = pro_deeper_mines
 		cost = 45
 		available = {
 		}
 
+		bypass = {
+            YMP = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		
 		completion_reward = {
 			YMP = {
 				ROOT = {
@@ -1614,17 +1612,23 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_jaeger_movement
+		id = pro_bones_to_rend
 		icon = GFX_goal_TTM_TOB_Flag
-		prerequisite = { focus = FIN_extra_refresher_exercises }
+		prerequisite = { focus = pro_deeper_mines }
 
 		x = 0
 		y = 1
-		relative_position_id = FIN_extra_refresher_exercises
+		relative_position_id = pro_deeper_mines
 		cost = 45
 		available = {
 		}
 
+		bypass = {
+            TOB = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		
 		completion_reward = {
 			TOB = {
 				ROOT = {
@@ -1635,13 +1639,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_salvaged_and_retooled
+		id = pro_deepest_mines
 		icon = GFX_goal_pal_the_below
-		prerequisite = { focus = FIN_extra_refresher_exercises }
+		prerequisite = { focus = pro_deeper_mines }
 
 		x = 2
 		y = 1
-		relative_position_id = FIN_extra_refresher_exercises
+		relative_position_id = pro_deeper_mines
 		cost = 45
 		available = {
 		}
@@ -1654,7 +1658,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NOT = { has_completed_focus = FIN_helsinki_air_defense }
+					NOT = { has_completed_focus = pro_new_far_son }
 				}
 				set_capital = {
 					state = 217
@@ -1671,13 +1675,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_winter_warfare
+		id = pro_mystery_of_diana
 		icon = GFX_goal_TTM_Twin_Mothers_Destroyed
-		prerequisite = { focus = FIN_the_cold_front }
+		prerequisite = { focus = pro_black_canyon }
 
 		x = -1
 		y = 1
-		relative_position_id = FIN_the_cold_front
+		relative_position_id = pro_black_canyon
 		cost = 45
 		available = {
 			TTM = {
@@ -1695,14 +1699,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_motti_tactics
+		id = pro_hellpit
 		icon = GFX_goal_TTM_Dinosaur_Bones
-		prerequisite = { focus = FIN_jaeger_movement }
-		prerequisite = { focus = FIN_the_cold_front }
+		prerequisite = { focus = pro_bones_to_rend }
+		prerequisite = { focus = pro_black_canyon }
 
 		x = -1
 		y = 1
-		relative_position_id = FIN_jaeger_movement
+		relative_position_id = pro_bones_to_rend
 		cost = 45
 		available = {
 		}
@@ -1713,18 +1717,22 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_motti_tactics
+		id = pro_oroboros
 		icon = GFX_goal_TTM_ORO_Flag
-		prerequisite = { focus = FIN_jaeger_movement }
-		prerequisite = { focus = FIN_the_cold_front }
+		prerequisite = { focus = pro_bones_to_rend }
+		prerequisite = { focus = pro_black_canyon }
 
 		x = 1
 		y = 1
-		relative_position_id = FIN_jaeger_movement
+		relative_position_id = pro_bones_to_rend
 		cost = 45
 		available = {
 		}
-
+		bypass = {
+            ORO = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
 		completion_reward = {
 			ORO = {
 				ROOT = {
@@ -1735,13 +1743,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_foreign_armor
+		id = pro_deep_form
 		icon = GFX_goal_generic_ruby_focus
-		prerequisite = { focus = FIN_salvaged_and_retooled }
-		mutually_exclusive = { focus = FIN_helsinki_air_defense }
+		prerequisite = { focus = pro_deepest_mines }
+		mutually_exclusive = { focus = pro_new_far_son }
 		x = 1
 		y = 1
-		relative_position_id = FIN_salvaged_and_retooled
+		relative_position_id = pro_deepest_mines
 		cost = 45
 		available = {
 		}
@@ -1754,13 +1762,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_utilize_the_sami
+		id = pro_gehenna
 		icon = GFX_goal_ORO_Gehenna
-		prerequisite = { focus = FIN_motti_tactics }
+		prerequisite = { focus = pro_hellpit }
 
 		x = -2
 		y = 1
-		relative_position_id = FIN_motti_tactics
+		relative_position_id = pro_hellpit
 		cost = 45
 
 		available = {
@@ -1774,13 +1782,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_long_range_patrols
+		id = pro_deadly_flowers
 		icon = GFX_goal_TTM_Spores
-		prerequisite = { focus = FIN_motti_tactics }
+		prerequisite = { focus = pro_hellpit }
 
 		x = 0
 		y = 1
-		relative_position_id = FIN_motti_tactics
+		relative_position_id = pro_hellpit
 		cost = 45
 
 		available = {
@@ -1794,13 +1802,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_finnish_radio_intelligence
+		id = pro_big_brother
 		icon = GFX_goal_generic_holy_shit_its_wendigos
-		prerequisite = { focus = FIN_motti_tactics }
+		prerequisite = { focus = pro_hellpit }
 
 		x = 2
 		y = 1
-		relative_position_id = FIN_motti_tactics
+		relative_position_id = pro_hellpit
 		cost = 45
 		available = {
 			owns_state = 78
@@ -1813,38 +1821,45 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_sissi
+		id = pro_ultracite_injections
 		icon = GFX_goal_ORO_Ultracite
-		prerequisite = { focus = FIN_utilize_the_sami }
-		prerequisite = { focus = FIN_long_range_patrols }
-		prerequisite = { focus = FIN_finnish_radio_intelligence }
-		mutually_exclusive = { focus = FIN_national_armor_focus }
+		prerequisite = { focus = pro_gehenna }
+		prerequisite = { focus = pro_deadly_flowers }
+		prerequisite = { focus = pro_big_brother }
+		mutually_exclusive = { focus = pro_pa_1 }
 		x = 0
 		y = 1
-		relative_position_id = FIN_long_range_patrols
+		relative_position_id = pro_deadly_flowers
 		cost = 45
 		available = {
-			has_army_experience > 99
+			has_army_experience > 49
 		}
 
 		completion_reward = {
-			set_technology = { special_forces_tech_level_settler = 1 }
+			if = {
+				limit = { has_tech = special_forces_tech_level_settler }
+				set_technology = { special_forces_tech_level_scientific = 1 }
+			}
+			else = {
+				set_technology = { special_forces_tech_level_settler = 1 }
+			}
 			set_technology = { exoskin_armoured_special_forces = 1 }
-			army_experience = -100
+			army_experience = -50
 		}
 	}
 
 	focus = {
-		id = FIN_national_armor_focus
+		id = pro_pa_1
 		icon = GFX_goal_generic_power_armour_raider_overboss
-		prerequisite = { focus = FIN_salvaged_and_retooled }
-		prerequisite = { focus = FIN_finnish_radio_intelligence }
-		mutually_exclusive = { focus = FIN_sissi }
+		prerequisite = { focus = pro_deepest_mines }
+		prerequisite = { focus = pro_big_brother }
+		mutually_exclusive = { focus = pro_ultracite_injections }
 		x = 0
 		y = 3
-		relative_position_id = FIN_salvaged_and_retooled
+		relative_position_id = pro_deepest_mines
 		cost = 45
 		available = {
+			has_army_experience > 24
 		}
 
 		completion_reward = {
@@ -1855,18 +1870,21 @@ focus_tree = {
 				#ahead_reduction = 0.5
 				category = power_armor_tech_category
 			}
+			army_experience = -25
 		}
 	}
 
 	focus = {
-		id = FIN_innovative_designs
+		id = pro_pa_2
 		icon = GFX_goal_generic_power_armor_blue
-		prerequisite = { focus = FIN_national_armor_focus }
+		prerequisite = { focus = pro_pa_1 }
 		x = 0
 		y = 1
-		relative_position_id = FIN_national_armor_focus
+		relative_position_id = pro_pa_1
 		cost = 45
-
+		available = {
+			has_army_experience > 24
+		}
 		completion_reward = {
 			set_technology = { power_armour_tech_level_settler = 1 }
 			add_tech_bonus = {
@@ -1875,17 +1893,18 @@ focus_tree = {
 				ahead_reduction = 1.5
 				category = power_armor_tech_category
 			}
+			army_experience = -25
 		}
 	}
 
 	focus = {
-		id = FIN_underground_resistance_cells
+		id = pro_protectrons
 		icon = GFX_goal_generic_protectron_conceptart_construction
-		prerequisite = { focus = FIN_suomen_maavoimat }
+		prerequisite = { focus = pro_mole_tide }
 
 		x = 2
 		y = 1
-		relative_position_id = FIN_suomen_maavoimat
+		relative_position_id = pro_mole_tide
 		cost = 45
 		available = {
 		}
@@ -1896,13 +1915,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_mannerheim_line
+		id = pro_bunker_line
 		icon = GFX_goal_generic_bunker_1
-		prerequisite = { focus = FIN_suomen_maavoimat }
+		prerequisite = { focus = pro_mole_tide }
 
 		x = 4
 		y = 1
-		relative_position_id = FIN_suomen_maavoimat
+		relative_position_id = pro_mole_tide
 		cost = 45
 		available = {
 			controls_state = 1033
@@ -1999,13 +2018,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_defense_in_depth
+		id = pro_deep_defense
 		icon = GFX_goal_PLS_Military_Bunker
-		prerequisite = { focus = FIN_mannerheim_line }
+		prerequisite = { focus = pro_bunker_line }
 
 		x = 0
 		y = 1
-		relative_position_id = FIN_mannerheim_line
+		relative_position_id = pro_bunker_line
 		cost = 45
 		available = {
 
@@ -2017,14 +2036,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_helsinki_air_defense
-		icon = GFX_goal_WBH_dark_foundries #CHC_thralls_into_the_mines
-		prerequisite = { focus = FIN_mannerheim_line focus = FIN_expand_air_bases }
-		mutually_exclusive = { focus = FIN_foreign_armor }
+		id = pro_new_far_son
+		icon = GFX_goal_generic_scrap_city_housing #CHC_thralls_into_the_mines
+		prerequisite = { focus = pro_bunker_line focus = pro_nuclear_power }
+		mutually_exclusive = { focus = pro_deep_form }
 
 		x = 1
 		y = 2
-		relative_position_id = FIN_mannerheim_line
+		relative_position_id = pro_bunker_line
 		cost = 45
 		available = {
 		}
@@ -2048,15 +2067,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_suomen_ilmavoimat
+		id = pro_from_below
 		icon = GFX_goal_CAF_industry
-		prerequisite = { focus = FIN_increase_military_budget }
+		prerequisite = { focus = pro_wyoming_dominated }
 
 		x = 7
 		y = 0
-		relative_position_id = FIN_suomen_maavoimat
+		relative_position_id = pro_mole_tide
 		cost = 45
 		available = {
+			has_completed_focus = wyoming_mole_research
 		}
 
 		completion_reward = {
@@ -2077,13 +2097,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_expand_air_bases
+		id = pro_nuclear_power
 		icon = GFX_goal_TTM_Nuclear_Power
-		prerequisite = { focus = FIN_suomen_ilmavoimat }
+		prerequisite = { focus = pro_from_below }
 
 		x = -1
 		y = 1
-		relative_position_id = FIN_suomen_ilmavoimat
+		relative_position_id = pro_from_below
 		cost = 45
 		available = {
 		}
@@ -2102,52 +2122,80 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_foreign_aircraft
+		id = pro_lonetree
 		icon = GFX_goal_lon_flag
-		prerequisite = { focus = FIN_expand_air_bases }
+		prerequisite = { focus = pro_nuclear_power }
 
 		x = 0
 		y = 1
-		relative_position_id = FIN_expand_air_bases
+		relative_position_id = pro_nuclear_power
 		cost = 45
 		available = {
 		}
 
+		bypass = {
+            LON = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		
 		completion_reward = {
 			LON = {
 				ROOT = {
 					grant_wargoals_on_core_states_of_prev = yes
 				}
 			}
+			every_state = {
+				limit = {
+					is_core_of = LON
+					NOT = {
+						is_owned_by = PRO
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1.5
+				}
+			}
+			#set_temp_variable = {
+			#	caps_to_add = 50.00
+			#}
+			#add_caps = yes
+			#add_equipment_to_stockpile = {
+			#	type = infantry_equipment
+			#	amount = 500
+			#	producer = LON
+			#}
 		}
 	}
 
 	focus = {
-		id = FIN_pilot_training
-		icon = GFX_goal_TTM_Defending_Our_Ideals
-		prerequisite = { focus = FIN_suomen_ilmavoimat }
+		id = pro_morghorl_means
+		icon = GFX_goal_generic_walls_focus #TTM_Defending_Our_Ideals
+		prerequisite = { focus = pro_from_below }
 
 		x = 1
 		y = 1
-		relative_position_id = FIN_suomen_ilmavoimat
+		relative_position_id = pro_from_below
 		cost = 45
 		available = {
 		}
 
 		completion_reward = {
-			army_experience = 50
-			add_command_power = 25
+			custom_effect_tooltip = PRO_unlock_menace_tt
+			#army_experience = 50
+			#add_command_power = 25
 		}
 	}
 
 	focus = {
-		id = FIN_expand_air_force_academy
+		id = pro_jurassic_strength
 		icon = GFX_goal_TTM_Breaker_Of_Chains
-		prerequisite = { focus = FIN_pilot_training }
+		prerequisite = { focus = pro_morghorl_means }
 
 		x = 0
 		y = 1
-		relative_position_id = FIN_pilot_training
+		relative_position_id = pro_morghorl_means
 		cost = 45
 		available = {
 		}
@@ -2158,39 +2206,71 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_naval_airforce
+		id = pro_rockblasting
 		icon = GFX_goal_generic_creature_bald_eagle
-		prerequisite = { focus = FIN_suomen_ilmavoimat }
-		prerequisite = { focus = FIN_suomen_merivoimat }
+		prerequisite = { focus = pro_from_below }
+		prerequisite = { focus = pro_drilling }
 
 		x = 2
 		y = 3
-		relative_position_id = FIN_suomen_ilmavoimat
+		relative_position_id = pro_from_below
 		cost = 45
 		available = {
-
+			any_neighbor_country = { original_tag = EAG } 
 		}
 
+		bypass = {
+            EAG = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		
 		completion_reward = {
 			EAG = {
 				ROOT = {
 					grant_wargoals_on_core_states_of_prev = yes
 				}
 			}
+			every_state = {
+				limit = {
+					is_core_of = EAG
+					NOT = {
+						is_owned_by = PRO
+					}
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 0.25
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1.5
+				}
+			}
+			#set_temp_variable = {
+			#	caps_to_add = 50.00
+			#}
+			#add_caps = yes
+			#add_equipment_to_stockpile = {
+			#	type = fireteam_equipment
+			#	amount = 250
+			#	producer = EAG
+			#}
 		}
 	}
 
 	focus = {
-		id = FIN_national_aircraft_production
-		icon = GFX_KHA_focus_planning
-		prerequisite = { focus = FIN_expand_air_bases }
-		prerequisite = { focus = FIN_pilot_training }
+		id = pro_boss_big_decision
+		icon = GFX_goal_moleminer_sad_unpog #GFX_KHA_focus_planning
+		prerequisite = { focus = pro_nuclear_power }
+		prerequisite = { focus = pro_morghorl_means }
 
 		x = 1
 		y = 2
-		relative_position_id = FIN_expand_air_bases
+		relative_position_id = pro_nuclear_power
 		cost = 45
 		available = {
+			has_completed_focus = wyoming_idea_coalesce_pro
 		}
 
 		completion_reward = {
@@ -2199,13 +2279,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_support_for_ground_forces
+		id = pro_utah_expansion
 		icon = GFX_goal_NCN_temple
-		prerequisite = { focus = FIN_national_aircraft_production }
-		mutually_exclusive = { focus = FIN_dominate_the_skies }
+		prerequisite = { focus = pro_boss_big_decision }
+		mutually_exclusive = { focus = pro_colorado_expansion }
 		x = -1
 		y = 1
-		relative_position_id = FIN_national_aircraft_production
+		relative_position_id = pro_boss_big_decision
 		cost = 45
 		available = {
 		}
@@ -2224,13 +2304,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_dominate_the_skies
+		id = pro_colorado_expansion
 		icon = GFX_goal_generic_colorado
-		prerequisite = { focus = FIN_national_aircraft_production }
-		mutually_exclusive = { focus = FIN_support_for_ground_forces }
+		prerequisite = { focus = pro_boss_big_decision }
+		mutually_exclusive = { focus = pro_utah_expansion }
 		x = 1
 		y = 1
-		relative_position_id = FIN_national_aircraft_production
+		relative_position_id = pro_boss_big_decision
 		cost = 45
 		available = {
 		}
@@ -2248,41 +2328,64 @@ focus_tree = {
 		}
 	}
 
+	#focus = {
+	#	id = pro_idaho_expansion
+	#	icon = GFX_goal_HEA_focus_embracing_violence #MCA_Colonel_Utah_Card
+	#	prerequisite = { focus = pro_utah_expansion focus = pro_colorado_expansion }
+	#	prerequisite = { focus = pro_new_far_son }
+	#	mutually_exclusive = { focus = pro_boss_loot_loot }
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = pro_utah_expansion
+	#	cost = 45
+	#	available = {
+	#	}
+	#	completion_reward = {
+	#		custom_effect_tooltip = wyoming_idaho_claim_tt
+	#		#custom_effect_tooltip = PRO_idaho_claim_tt
+	#		custom_effect_tooltip = PRO_nightkin_available_tt
+	#		if = {
+	#			has_completed_focus
+	#		}
+	#		hidden_effect = {
+	#			every_state = {
+	#				limit = {
+	#					is_idaho_state = yes
+	#				}
+	#				add_claim_by = PRO
+	#			}
+	#		}
+	#	}
+	#}
+	
 	focus = {
-		id = FIN_expand_production_lines
-		icon = GFX_goal_HEA_focus_embracing_violence #MCA_Colonel_Utah_Card
-		prerequisite = { focus = FIN_support_for_ground_forces focus = FIN_dominate_the_skies }
-		prerequisite = { focus = FIN_helsinki_air_defense }
-		mutually_exclusive = { focus = FIN_modernize_production_lines }
+		id = pro_strange_visitors
+		icon = GFX_goal_mutant_nightkin
+		prerequisite = { focus = pro_utah_expansion focus = pro_colorado_expansion }
+		prerequisite = { focus = pro_new_far_son }
+		mutually_exclusive = { focus = pro_boss_loot_loot }
 		x = -1
 		y = 1
-		relative_position_id = FIN_support_for_ground_forces
+		relative_position_id = pro_utah_expansion
 		cost = 45
+
 		available = {
 		}
+
 		completion_reward = {
-			custom_effect_tooltip = wyoming_idaho_claim_tt
-			custom_effect_tooltip = PRO_idaho_claim_tt
-			hidden_effect = {
-				every_state = {
-					limit = {
-						is_idaho_state = yes
-					}
-					add_claim_by = PRO
-				}
-			}
+			country_event = nf_pro.6
 		}
 	}
 
 	focus = {
-		id = FIN_modernize_production_lines
-		icon = GFX_goal_generic_scrap_city_housing
-		prerequisite = { focus = FIN_dominate_the_skies focus = FIN_support_for_ground_forces }
-		prerequisite = { focus = FIN_naval_airforce }
-		mutually_exclusive = { focus = FIN_expand_production_lines }
+		id = pro_boss_loot_loot
+		icon = GFX_goal_WBH_dark_foundries
+		prerequisite = { focus = pro_colorado_expansion focus = pro_utah_expansion }
+		prerequisite = { focus = pro_rockblasting }
+		mutually_exclusive = { focus = pro_strange_visitors }
 		x = 1
 		y = 1
-		relative_position_id = FIN_dominate_the_skies
+		relative_position_id = pro_colorado_expansion
 		cost = 45
 
 		completion_reward = {
@@ -2290,8 +2393,8 @@ focus_tree = {
 				remove = pro_morghol_generic
 				add = pro_morghol_advanced
 			}
-			add_to_variable = { coring_cost_country_factor = -0.10 }
-			custom_effect_tooltip = PRO_20_percent_coring_cost_decrease_tt
+			add_to_variable = { coring_cost_country_factor = -0.40 }
+			custom_effect_tooltip = PRO_40_percent_coring_cost_decrease_tt
 			#custom_effect_tooltip = PRO_core_impassable_tt
 			#hidden_effect = {
 			#	every_state = {
@@ -2305,13 +2408,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_suomen_merivoimat
+		id = pro_drilling
 		icon = GFX_goal_TTM_Dynamite
-		prerequisite = { focus = FIN_increase_military_budget }
+		prerequisite = { focus = pro_wyoming_dominated }
 
 		x = 6
 		y = 0
-		relative_position_id = FIN_suomen_ilmavoimat
+		relative_position_id = pro_from_below
 		cost = 45
 
 		available = {
@@ -2326,13 +2429,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_the_merchant_fleet
+		id = pro_supply_vehicle
 		icon = GFX_goal_generic_industrial_truck
-		prerequisite = { focus = FIN_suomen_merivoimat }
+		prerequisite = { focus = pro_drilling }
 
 		x = -3
 		y = 1
-		relative_position_id = FIN_suomen_merivoimat
+		relative_position_id = pro_drilling
 		cost = 45
 		available = {
 		}
@@ -2346,14 +2449,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_conversion_of_civilian_vessels
+		id = pro_horls_secret_stash
 		icon = GFX_goal_NEW_Caps_for_Loyalty
-		prerequisite = { focus = FIN_the_merchant_fleet }
-		prerequisite = { focus = FIN_coastal_defense }
+		prerequisite = { focus = pro_supply_vehicle }
+		prerequisite = { focus = pro_supplies }
 
 		x = 1
 		y = 1
-		relative_position_id = FIN_the_merchant_fleet
+		relative_position_id = pro_supply_vehicle
 		cost = 45
 		available = {
 		}
@@ -2364,18 +2467,23 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_coastal_defense
+		id = pro_supplies
 		icon = GFX_goal_imo_ammobox
-		prerequisite = { focus = FIN_suomen_merivoimat }
+		prerequisite = { focus = pro_drilling }
 
 		x = 0
 		y = 1
-		relative_position_id = FIN_suomen_merivoimat
+		relative_position_id = pro_drilling
 		cost = 45
 		available = {
 		}
 
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = supply_equipment
+				amount = 10
+				producer = USA
+			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 250
@@ -2386,12 +2494,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_marine_jaeger_divisions
+		id = pro_hunting_humans
 		icon = GFX_goal_generic_f76_player2
-		prerequisite = { focus = FIN_coastal_defense }
+		prerequisite = { focus = pro_supplies }
 		x = 0
 		y = 1
-		relative_position_id = FIN_coastal_defense
+		relative_position_id = pro_supplies
 		cost = 45
 		available = {
 		}
@@ -2402,13 +2510,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_rapid_raiders
+		id = pro_big_boom
 		icon = GFX_goal_MOJ_technology_raids
-		prerequisite = { focus = FIN_coastal_defense }
-		mutually_exclusive = { focus = FIN_deep_sea_raiders }
+		prerequisite = { focus = pro_supplies }
+		mutually_exclusive = { focus = pro_shoulder_mmg }
 		x = -1
 		y = 2
-		relative_position_id = FIN_coastal_defense
+		relative_position_id = pro_supplies
 		cost = 45
 		available = {
 		}
@@ -2419,13 +2527,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_deep_sea_raiders
+		id = pro_shoulder_mmg
 		icon = GFX_goal_MOJ_gun_runner_caravan_raids
-		prerequisite = { focus = FIN_coastal_defense }
-		mutually_exclusive = { focus = FIN_rapid_raiders }
+		prerequisite = { focus = pro_supplies }
+		mutually_exclusive = { focus = pro_big_boom }
 		x = 1
 		y = 2
-		relative_position_id = FIN_coastal_defense
+		relative_position_id = pro_supplies
 		cost = 45
 		available = {
 		}
@@ -2436,13 +2544,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_sea_mines_strategy
+		id = pro_lined_ammo
 		icon = GFX_goal_generic_ammo_box
-		prerequisite = { focus = FIN_rapid_raiders focus = FIN_deep_sea_raiders }
+		prerequisite = { focus = pro_big_boom focus = pro_shoulder_mmg }
 
 		x = 1
 		y = 1
-		relative_position_id = FIN_rapid_raiders
+		relative_position_id = pro_big_boom
 		cost = 45
 		available = {
 		}
@@ -2454,13 +2562,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_strengthen_the_naval_bases
+		id = pro_airbase
 		icon = GFX_goal_generic_air_doctrines_focus
-		prerequisite = { focus = FIN_suomen_merivoimat }
+		prerequisite = { focus = pro_drilling }
 
 		x = 2
 		y = 1
-		relative_position_id = FIN_suomen_merivoimat
+		relative_position_id = pro_drilling
 		cost = 45
 		available = {
 		}
@@ -2482,36 +2590,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_acquire_andros_dockyards
+		id = pro_air_tech
 		icon = GFX_goal_generic_airship_1
-		prerequisite = { focus = FIN_suomen_merivoimat }
+		prerequisite = { focus = pro_drilling }
 
 		x = 4
 		y = 1
-		relative_position_id = FIN_suomen_merivoimat
-		cost = 45
-		available = {
-		}
-
-		completion_reward = {
-			air_experience = 50
-			add_equipment_to_stockpile = {
-				type = blimp_equipment_2
-				amount = 50
-				producer = USA
-			}
-		}
-	}
-
-	focus = {
-		id = FIN_expand_ship_building_industry
-		icon = GFX_goal_MCA_Freedom_Air_Force
-		prerequisite = { focus = FIN_strengthen_the_naval_bases }
-		prerequisite = { focus = FIN_acquire_andros_dockyards }
-
-		x = 0
-		y = 1
-		relative_position_id = FIN_strengthen_the_naval_bases
+		relative_position_id = pro_drilling
 		cost = 45
 		available = {
 		}
@@ -2527,14 +2612,37 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FIN_expansion_towards_the_atlantic
+		id = pro_blimp_power
+		icon = GFX_goal_MCA_Freedom_Air_Force
+		prerequisite = { focus = pro_airbase }
+		prerequisite = { focus = pro_air_tech }
+
+		x = 0
+		y = 1
+		relative_position_id = pro_airbase
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			air_experience = 50
+			add_equipment_to_stockpile = {
+				type = blimp_equipment_2
+				amount = 15
+				producer = USA
+			}
+		}
+	}
+
+	focus = {
+		id = pro_mini_boom
 		icon = GFX_goal_generic_nuka_break_nuke
-		prerequisite = { focus = FIN_sea_mines_strategy }
-		prerequisite = { focus = FIN_expand_ship_building_industry }
+		prerequisite = { focus = pro_lined_ammo }
+		prerequisite = { focus = pro_blimp_power }
 
 		x = 2
 		y = 1
-		relative_position_id = FIN_sea_mines_strategy
+		relative_position_id = pro_lined_ammo
 		cost = 45
 		available = {
 		}
@@ -2544,10 +2652,449 @@ focus_tree = {
 				mininuke_unlock_tech = 1
 			}
 		}
+	}	
+	#░██████╗██████╗░██╗██████╗░██╗████████╗  ███████╗██╗░░░░░░█████╗░░█████╗░██╗░░██╗
+	#██╔════╝██╔══██╗██║██╔══██╗██║╚══██╔══╝  ██╔════╝██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
+	#╚█████╗░██████╔╝██║██████╔╝██║░░░██║░░░  █████╗░░██║░░░░░██║░░██║██║░░╚═╝█████═╝░
+	#░╚═══██╗██╔═══╝░██║██╔══██╗██║░░░██║░░░  ██╔══╝░░██║░░░░░██║░░██║██║░░██╗██╔═██╗░
+	#██████╔╝██║░░░░░██║██║░░██║██║░░░██║░░░  ██║░░░░░███████╗╚█████╔╝╚█████╔╝██║░╚██╗
+	#╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░░╚═╝░░░  ╚═╝░░░░░╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝
+	
+	focus = { #Silet Giants
+		id = pro_silent_giant
+		icon = GFX_goal_NCN_By_The_Sword_And_The_Cross
+		available = {
+			always = no
+		}
+		x = 16
+		y = 1
+		relative_position_id = pro_wyoming_dominated
+		cost = 45
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRO_nightkin_available_tt
+				has_country_flag = PRO_nightkin_established
+			}
+		}
+
+		completion_reward = {
+			#country_event = nf_pro.9
+		}
 	}
-	###########################
-	### Sietch Unique Focus ###
-	###########################
+	
+	focus = { #A Seed Of Faith
+		id = pro_seed_of_faith
+		icon = GFX_goal_HEA_focus_an_eye_for_an_eye
+		available = {
+		}
+		prerequisite = { focus = pro_silent_giant }
+		x = 1
+		y = 1
+		relative_position_id = pro_silent_giant
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = pro_kid_named_spiritualconfusion
+		}
+	}
+	
+	focus = { #A Abraham and Isaac
+		id = pro_abraham_and_isaac
+		icon = GFX_goal_HEA_focus_archangel_rises
+		available = {
+			has_completed_focus = pro_seed_of_faith
+		}
+		prerequisite = { focus = pro_silent_giant }
+		x = -1
+		y = 1
+		relative_position_id = pro_silent_giant
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			PRO = {
+				kill_country_leader = yes
+			}
+			add_country_leader_role = {
+				character = PRO_sister_abraham
+				promote_leader = yes
+				country_leader = {
+					ideology = warlordship
+					expire = "2300.1.1.1"
+					traits = { pro_sister_abraham_trait_1 }
+				}
+			}
+			hidden_effect = { 
+				activate_mission = pro_abraham_trait_swap
+			}
+			set_country_flag = PRO_abraham_decisions_active
+			set_cosmetic_tag = PRO_spirit_flock
+		}
+	}
+	
+	focus = { #A Schism To Mend
+		id = pro_schism_mending
+		icon = GFX_goal_HEA_focus_blessing_of_the_angels
+		available = {
+		}
+		#prerequisite = { focus = pro_seed_of_faith }
+		prerequisite = { focus = pro_abraham_and_isaac }
+		x = -1
+		y = 1
+		relative_position_id = pro_seed_of_faith
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			ANO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+			HGH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+			MUR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #The Heavy Burden Of Repentance
+		id = pro_heavy_burden
+		icon = GFX_goal_HEA_focus_mercy_for_the_wicked
+		available = {
+		}
+		prerequisite = { focus = pro_abraham_and_isaac }
+		x = 2
+		y = 1
+		relative_position_id = pro_seed_of_faith
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			set_temp_variable = {
+				caps_to_add = -25.0
+			}
+			add_caps = yes
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus = { #Many Trees
+		id = pro_many_trees
+		icon = GFX_goal_HEA_focus_embassy_of_christ
+		available = {
+		}
+		prerequisite = { focus = pro_abraham_and_isaac }
+		x = -2
+		y = 1
+		relative_position_id = pro_abraham_and_isaac
+		cost = 45
+		available = {
+            LON = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+
+		completion_reward = {
+			LON = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #They Will Have No David
+		id = pro_no_david
+		icon = GFX_goal_behemoth
+		available = {
+		}
+		prerequisite = { focus = pro_many_trees }
+		prerequisite = { focus = pro_schism_mending }
+		x = 1
+		y = 1
+		relative_position_id = pro_many_trees
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			add_field_marshal_role = {
+				character = PRO_goliath
+				desc = ""
+				traits = {
+					strong_trait
+					enduring_trait
+				}
+				skill = 4
+				attack_skill = 5
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+	}
+	
+	focus = { #Steam and Sin (Finger)
+		id = pro_steam_and_sin 
+		icon = GFX_goal_HEA_focus_embracing_violence #HEA_focus_billowing_cathedral 
+		available = {
+		}
+		prerequisite = { focus = pro_schism_mending }
+		x = 0
+		y = 1
+		relative_position_id = pro_schism_mending
+		cost = 45
+		available = {
+		}
+
+		bypass = {
+            HEA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		
+		completion_reward = {
+			HEA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #A Messenger to her People
+		id = pro_messenger
+		icon = GFX_goal_HEA_focus_learning_to_forgive
+		available = {
+		}
+		prerequisite = { focus = pro_schism_mending }
+		prerequisite = { focus = pro_heavy_burden }
+		x = 2
+		y = 1
+		relative_position_id = pro_schism_mending
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = PRO }
+				#is_valid_state_for_civilian_factory = yes
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = water_generator
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #Holy Spirit
+		id = pro_holy_spirit
+		icon = GFX_goal_HEA_focus_wings_of_the_angels
+		available = {
+		}
+		prerequisite = { focus = pro_messenger }
+		x = 0
+		y = 1
+		relative_position_id = pro_messenger
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_tech = special_forces_tech_level_settler }
+				set_technology = { special_forces_tech_level_scientific = 1 }
+			}
+			else = {
+				set_technology = { special_forces_tech_level_settler = 1 }
+			}
+			add_manpower = 500
+		}
+	}
+	
+	focus = { #A Quilt of Patchwork Faith
+		id = pro_quilt_of_faith
+		icon = GFX_goal_HEA_focus_mandatory_service
+		available = {
+		}
+		prerequisite = { focus = pro_no_david }
+		x = 0
+		y = 1
+		relative_position_id = pro_no_david
+		cost = 45
+		available = {
+		}
+
+		completion_reward = {
+			ANO = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			MUR = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			add_stability = -0.1
+		}
+	}
+	
+	focus = { #Defilers_and_devils
+		id = pro_defilers
+		icon = GFX_goal_HEA_focus_declaration_of_crusade
+		available = {
+		}
+		prerequisite = { focus = pro_steam_and_sin }
+		x = 0
+		y = 1
+		relative_position_id = pro_steam_and_sin
+		cost = 45
+		available = {
+		}
+
+
+		bypass = {
+			owns_state = 551
+            NCN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					WHT = {
+						exists = yes
+						owns_state = 551
+					}
+				}
+				WHT = {
+					PRO = {
+						grant_wargoals_on_core_states_of_prev = yes
+					}
+				}
+				551 = {
+					add_claim_by = PRO
+				}
+			}
+			else = {
+				NCN = {
+					PRO = {
+						grant_wargoals_on_core_states_of_prev = yes
+					}
+				}
+				551 = {
+					add_claim_by = PRO
+				}
+			}
+		}
+	}
+	
+	focus = { #Den of Thieves
+		id = pro_den_of_thieves
+		icon = GFX_goal_NCN_cleans_heathens
+		available = {
+		}
+		prerequisite = { focus = pro_defilers }
+		x = 1
+		y = 1
+		relative_position_id = pro_defilers
+		cost = 45
+		available = {
+			owns_state = 551
+			NCN = {
+				OR = {
+					exists = no 
+					is_subject_of = PRO
+				}
+			}
+		}
+		
+		bypass = {
+		}
+		
+		completion_reward = {
+			#release_puppet = NCN
+			release_puppet_on_controlled = NCN
+			NCN = {
+				promote_character = NCN_daniel
+				set_politics = {
+					ruling_party = people
+					elections_allowed = no
+				}
+				retire_character = NCN_jeremiah_rigdon
+			}
+		}
+	}
+	
+	focus = { #Battles of words not bullets
+		id = pro_battle_of_words
+		icon = GFX_goal_HEA_focus_the_great_debate
+		available = {
+		}
+		prerequisite = { focus = pro_defilers }
+		x = -1
+		y = 1
+		relative_position_id = pro_defilers
+		cost = 45
+		available = {
+			owns_state = 551
+			NCN = {
+				OR = {
+					exists = no 
+					is_subject_of = PRO
+				}
+			}
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = pro_kid_named_spiritualconfusion
+				add_idea = pro_kid_named_spiritualconfusion_lesser
+			}
+		}
+	}
+	
+	
+	
+	
+	#░██████╗██╗███████╗████████╗░█████╗░██╗░░██╗
+	#██╔════╝██║██╔════╝╚══██╔══╝██╔══██╗██║░░██║
+	#╚█████╗░██║█████╗░░░░░██║░░░██║░░╚═╝███████║
+	#░╚═══██╗██║██╔══╝░░░░░██║░░░██║░░██╗██╔══██║
+	#██████╔╝██║███████╗░░░██║░░░╚█████╔╝██║░░██║
+	#╚═════╝░╚═╝╚══════╝░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝
 
 	focus = {
 		id = sie_cowboys_and_tribals

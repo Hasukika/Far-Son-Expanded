@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		pro_ultracite = {
-			picture = pickaxe
+			picture = generic_pickaxe
 			allowed = {
 				always = no
 			}
@@ -17,7 +17,7 @@ ideas = {
 			}
 		}
 		pro_ultracite_bullet = {
-			picture = moj_saturnite
+			picture = MOJ_saturnite
 			allowed = {
 				always = no
 			}
@@ -28,7 +28,7 @@ ideas = {
 			modifier = {
 				army_strength_factor = 0.1
 				breakthrough_factor = 0.05
-				army_attack_speed_factor = 0.05
+				#army_attack_speed_factor = 0.05
 			}
 		}
 		pro_mining_robot = {
@@ -41,7 +41,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.08
+				terrain_penalty_reduction = 0.05
 				local_resources_factor = 0.05
 			}
 		}
@@ -76,7 +76,8 @@ ideas = {
 			modifier = {
 				#army_attack_factor = 0.085
 				#army_org_factor = 0.10
-				land_night_attack = 0.25
+				land_night_attack = 0.2
+				army_attack_speed_factor = 0.05
 			}
 		}
 		pro_stash = {
@@ -190,7 +191,54 @@ ideas = {
 				army_org_factor = 0.1
 			}
 		}
+		#SPIRIT FLOCK
+		pro_kid_named_spiritualconfusion = { 
+			picture = MEX_church_power_2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+		pro_kid_named_spiritualconfusion_lesser = { 
+			picture = MEX_church_power_5
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				weekly_manpower = 7
+			}
+		}
 	}
-	hidden_ideas = {
+	hidden_ideas = { 
+		currencyscrip = { #This Idea should be in gov_economic!
+			picture = gov_idea_bottle_cap
+			#cost = 150
+			removal_cost = -1
+			available = {
+			}
+			# NOTE FOR CHANGING THESE MODIFIERS: The Caps GUI uses manual localisation with a tooltip to tell players the modifiers of their currency on hover
+			# If you change any of these numbers, you NEED to also update currencygenericcap_info for players to know what the true effects of the currency are
+			modifier = {
+				consumer_goods_expected_value = 0.01
+				local_resources_factor = 0.06
+				caps_flat_income_modifier = 12
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				base = 1
+			}
+		}
 	}
 }

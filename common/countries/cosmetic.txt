@@ -8,6 +8,11 @@ PRO_horde_formable = {
 	color_ui = rgb { 153 0 0 }
 }
 
+PRO_spirit_flock = {
+	color = rgb { 213 0 255 }
+	color_ui = rgb { 213 0 2555 }
+}
+
 ACH_texan_brotherhood = {
 	color = rgb { 100 115 100 }
 	color_ui = rgb { 100 115 100 }

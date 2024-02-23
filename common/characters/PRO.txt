@@ -69,4 +69,12 @@ characters = {
 			legacy_id = -1
 		}
 	}
+	PRO_goliath = {
+		name = "Goliath"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Supermutant_Generic_10
+			}
+		}
+	}
 }
