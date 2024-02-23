@@ -400,7 +400,7 @@ country_event = { #Nightkin Start Of Tree
 	}
 	
 	option = {
-		name = nf_pro.9.a
+		name = nf_pro.9.b
 		add_stability = -0.05
 		add_war_support = 0.05
 		complete_national_focus = pro_silent_giant
