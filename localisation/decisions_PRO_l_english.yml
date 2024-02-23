@@ -11,26 +11,27 @@
   PRO_moles_go_die_mission_desc:0 "The moles never stay above ground for long, soon they must return to their tunnels to strike another day."
   #ABRAHAM CATEGORY
   pro_abraham_cat:0 "The Twisted Mind"
+  pro_abraham_cat_desc:0 "Sister Abraham suffers from a constantly changing personality, this causes her to greatly change the way she leads her people every few weeks."
   pro_abraham_trait_swap:0 "Fluctuating Personality"
   
   #Evil
   pro_evil_decision_1:0 "§RWeapons For The Needy§!"
-  pro_evil_decision_1_desc:0 ""
+  #pro_evil_decision_1_desc:0 ""
   pro_evil_decision_2:0 "§RArming The Mutants§!"
-  pro_evil_decision_2_desc:0 ""
+  #pro_evil_decision_2_desc:0 ""
   pro_evil_decision_3:0 "§RHard Lessons To Learn§!"
-  pro_evil_decision_3_desc:0 ""
+  #pro_evil_decision_3_desc:0 ""
   pro_evil_decision_4:0 "§RGear For War§!"
-  pro_evil_decision_4_desc:0 ""
+  #pro_evil_decision_4_desc:0 ""
   #Good
   pro_good_decision_1:0 "§CHarmony And Unity§!"
-  pro_good_decision_1_desc:0 ""
+  #pro_good_decision_1_desc:0 ""
   pro_good_decision_2:0 "§CHelp The Locals§!"
-  pro_good_decision_2_desc:0 ""
+  #pro_good_decision_2_desc:0 ""
   pro_good_decision_3:0 "§CRebuild The Land§!"
-  pro_good_decision_3_desc:0 ""
+  #pro_good_decision_3_desc:0 ""
   pro_good_decision_4:0 "§CDistribute Wealth§!"
-  pro_good_decision_4_desc:0 ""
+  #pro_good_decision_4_desc:0 ""
   
   
   #DEFENSE CATEGORY

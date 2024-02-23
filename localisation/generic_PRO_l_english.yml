@@ -8,7 +8,8 @@
   PRO_int_pt_long:0 "Digger's Union"
   PRO_people_pt:0 "Far Son Miners"
   PRO_people_pt_long:0 "Far Son Miners Council"
-  
+  PRO_sister_ruler_pt:0 "Spirit Flock"
+  PRO_sister_ruler_pt_long:0 "The Spirit Flock"
   #CHARACTER NAME
   PRO_sister_abraham_name:0 "Sister Abraham"
   PRO_sister_abraham_desc:0 "" 
@@ -125,6 +126,6 @@
   
   nf_pro.9.t:0 "The Reigns In Their Hands"
   nf_pro.9.d:0 "Things seemed alright for Sister Abraham; her Nightkin were prospering, the moles left them alone, and only the occasional external danger would require joining forces with Morghorl. However, things were soon to change for the devoted nun.\nAs she watched the Mole Miners go about their work, she could see their endless gluttony and greed on full display. Something that became only worse and worse over time as Morghorl's miners amassed more wealth and loot for themselves and their boss alike. Her inner voices started calling for action, claiming it unacceptable for her to stay idle. Abraham repressed these thoughts for a while, but things only got worse. Soon, the other Nightkin reported their belongings vanishing and their religous 'artifacts' going missing too. The final nail in the coffin was when Abraham caught a group of Mole Miners mining right under her cave, trying to plunder it of any resources and valuables.\nThe sister knew she had to take matters into her own hand if an end to the madness was ever achievable.\n\nShe sensed that the loyalty of the moles wasn't as strong as Morghorl's iron fist led to believe. Maybe, just maybe, taking out the Boss could lead to a bloodless power transition."
-  nf_pro.9.a:0 "§CWe must protect ourself.§!"
+  nf_pro.9.a:0 "§CWe must protect ourselves.§!"
   nf_pro.9.b:0 "§RThey must feel our fury!§!"
   

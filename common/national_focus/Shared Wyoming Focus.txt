@@ -2729,6 +2729,11 @@ focus_tree = {
 			}
 			hidden_effect = { 
 				activate_mission = pro_abraham_trait_swap
+				set_party_name = { 
+					ideology = ruler
+					long_name = PRO_sister_ruler_pt_long 
+					name = PRO_sister_ruler_pt
+				}
 			}
 			set_country_flag = PRO_abraham_decisions_active
 			set_cosmetic_tag = PRO_spirit_flock
