@@ -31,7 +31,7 @@ leader_traits = {
 	pro_sister_abraham_trait_1 = {
 		random = no
 		war_support_factor = 0.05
-		justify_war_goal_time = -0.15
+		justify_war_goal_time = -0.05
 		ai_will_do = {
 			factor = 1
 		}
@@ -39,7 +39,7 @@ leader_traits = {
 	pro_sister_abraham_trait_2 = {
 		random = no
 		stability_factor = 0.05
-		consumer_goods_factor = -0.05
+		consumer_goods_factor = -0.025
 		ai_will_do = {
 			factor = 1
 		}
