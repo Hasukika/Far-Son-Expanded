@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_PRO_clive"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_clive.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_excavator"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_excavator.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_farson_full"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_farson_full.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_mole_miner_claw"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_mole_miner_claw.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_morghol"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_morghol.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_pickaxe"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_pickaxe.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_pineapple_king"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_pineapple_king.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_research"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_research.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_war"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_war.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_PRO_water_pump"
+		texturefile = "gfx/interface/goals/unique/PRO/PRO_water_pump.dds"
+	}
+}

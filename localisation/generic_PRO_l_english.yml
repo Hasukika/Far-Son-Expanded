@@ -8,7 +8,13 @@
   PRO_people_pt:0 "Far Son Miners"
   PRO_people_pt_long:0 "Far Son Miners Council"
   
+  PRO_sister_abraham_name:0 "Sister Abraham"
+  PRO_sister_abraham_desc:0 "" 
+  
   pro_ultracite:0 "Ultracite Mining"
+  pro_ultracite_bullet:0 "Ultracite-Lined Bullets"
+  pro_mining_robot:0 "Mining Robots"
+  pro_vehcile:0 "Big Wheels"
   pro_chaser_mentality:0 "Hunting Hour"
   pro_stash:0 "Morghorl's Stash"
   pro_army_stuff_1:0 "Staying Cautious"
@@ -17,12 +23,22 @@
   pro_army_stuff_4:0 "Deeper Tunnels"
   wyoming_idea_snake_of_wyoming_1:0 "Far Son's Finest"
   wyoming_idea_snake_of_wyoming_2:0 "Far Son's Finest"
+  PRO_far_son_mine_industry_final:0 "Factory Tunnels"
+  PRO_far_son_defense_modifier:0 "Deep Defense Network"
   
+  wyoming_idaho_claim_tt:0 "We will §Cgain claims§! on all of §GIdaho§!!"
+  PRO_idaho_claim_tt:0 "Should we take in the §cNightkin§! and conquer §CHeavens Gate§! an event will occur."
   PRO_every_owned_state_tt:0 "§YEver core State:§!"
   PRO_every_state_bunker_tt:0 "Add §G1§! §YOutpost§! in §Yevery Tile§!"
+  PRO_defense_network_tt:0 "Unlocks §YDecisions§! to easier defend our §YCore States§!"
+  PRO_core_impassable_tt:0 "We will §Ygain cores§! on every §RImpassable§! state!"
+  PRO_20_percent_coring_cost_decrease_tt: "Gain a permanent §G10%§! decrease in coring costs."
   
   pro_morghol_gaming:0 "Morghorl's Cunning"
   pro_morghol_generic:0 "Greedy"
+  pro_morghol_advanced:0 "Insatiable"
+  pro_sister_abraham_trait_1:0 "§RHoly Fury§!"
+  pro_sister_abraham_trait_2:0 "§CDivine Mercy§!"
   
   PRO_mining_formable_people:0 "The Deep"
   PRO_mining_formable_people_ADJ:0 "Deep"
@@ -50,3 +66,18 @@
   PRO_horde_formable_intellectuals_ADJ:0 "Far Son"
   PRO_horde_formable_intellectuals_DEF:0 "New Far Son"
  
+  nf_pro.4.t:0 "The Hellpit"
+  nf_pro_4.d:0 ""
+  nf_pro_4.a:0 ""
+  
+  nf_pro.5.t:0 "Morghorl's Big Choice"
+  nf_pro.5.d:0 ""
+  nf_pro.5.a:0 ""
+  
+  nf_pro.6.t:0 "Strange Visitors"
+  nf_pro.6.d:0 ""
+  nf_pro.6.a:0 ""
+  
+  nf_pro.6.t:0 "Strange Visitors"
+  nf_pro.6.d:0 ""
+  nf_pro.6.a:0 ""
