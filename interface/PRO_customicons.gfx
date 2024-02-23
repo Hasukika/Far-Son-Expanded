@@ -1,0 +1,13 @@
+spriteTypes = {
+	#CAPS
+	spriteType = {
+		name = "GFX_bottle_cap_display_scrip"
+		texturefile = "gfx/interface/icons/bottle_cap_pro.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_currency_PRO_text_icon"
+		texturefile = "gfx/texticons/GFX_currency_PRO_text_icon.dds"
+		legacy_lazy_load = no
+	}
+}

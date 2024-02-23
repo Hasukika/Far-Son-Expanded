@@ -17,7 +17,7 @@
   wyoming_mole_water:0 "Water Pumping"
   wyoming_mole_water_desc:0 "The mineshafts the Miners used often flooded, before the war they had a lot of pumps set up to help with that, although they were long broken now. Still, the Miners figured they could repair them and even use the water for their own purposes. Not like the little radiation bothered them."
   
-  wyoming_mole_factory_1:0 "Boss's Big Plan"
+  wyoming_mole_factory_1:0 "Boss' Big Plan"
   wyoming_mole_factory_1_desc:0 "The Boss always made plans, it was kind of his job. Well, maybe they weren't always the best or practical plans, but they definetly were always ambitious. Now the Boss had decided to make a new plan, his biggest one yet. And to make it reality he'd need a lot of preparing."
   
   wyoming_mole_plant:0 "The Big Dig"
@@ -37,66 +37,6 @@
   
   wyoming_mole_research:0 "Underground Empire"
   wyoming_mole_research_desc:0 "The surface cleaned and the tunnels connected, the Boss was happy with Wyoming. A true land of Miners and mutation, where the hills were hollow and the ground full of riches. Here, nobody dared to mess with Morghorl."
-  
-  pro_stormchasing:0 "Wyoming, Dominated"
-  pro_stormchasing_desc:0 "The Miners didn't take long to move in. How could anyone stop them? The Watch that had so heroically assembled had fallen, despite their best efforts to stem the moletide. Now, the Boss was in charge, yet that wasn't even the worst part. The worst part was that he was dissatisfied."
-  
-  pro_appease_wind_spirits:0 "Choppin' Wood"
-  pro_appease_wind_spirits_desc:0 "Lonetree was a perfect choice for the Boss. It would secure a wider berth around the South Pass and Far Son, allowing a longer front to be maintained against the surface dwellers."
-  
-  pro_storms_fury:0 "A Treasure Trove"
-  pro_storms_fury_desc:0 "To the north the Boss turned himself then, towards the home of some 'Baron'. Hungry for their wealth and craving violence, he whipped the miners into a frenzy and lead the way into northern Wyoming."
-  
-  pro_abandoned_airfields:0 "Bunkering Down"
-  pro_abandoned_airfields_desc:0 "With all their new conquest the moles found their old tunnels undermanned and badly maintained. The Boss told them to fix up the supports, make some repairs on the vents and build a ton of defensive positions so any invader wouldn't stand a chance. The moles quietly obeyed."
-  
-  pro_rewire_radio_towers:0 "Hunting Humans"
-  pro_rewire_radio_towers_desc:0 "The moles were slow, loud, and not very quick on the draw, but the humans still feared them more than any raider gang or supermutant. Since they were used to operating in complete darkness the Miners usually hunted at night, and no human was safe from them at hunting hour."
-  
-  pro_secret_stash_air_force:0 "Atomic Mining Techniques"
-  pro_secret_stash_air_force_desc:0 "The Mole Miners do not celebrate their successes but Boss Morghorl could not help but spend the day barking happily after inspecting the newest pile of loot dragged before him. In the center of the heap, buried under an old chryslus was a crate of untouched mini nukes."
-  
-  pro_rewire_radio_towers_2:0 "Even More Boom"
-  pro_rewire_radio_towers_2_desc:0 "The Miners liked Alton Bourges' toys, but sadly those were limited in number so there was always a big need for scavenging anything they could get their hands on. Luckily the Boss, in his infinite cunning, managed to figure out how to break into an old military base and snatch some blueprints from there. With these documents he could get the Miners some really deadly firepower."
-  
-  pro_ancestral_knowledge:0 "Rockblasting"
-  pro_ancestral_knowledge_desc:0 "With their new tools the Miners mobilised and armed themselves to the teeth, especially Morghorl was eager to get more loot in his grabbers."
-  
-  pro_kid_namer:0 "Morghorl's Secret Stash"
-  pro_kid_namer_desc:0 "With all the loot Morghorl's coffins were bursting, his treasure chamber could hardly hold any more. Even worse, he grew paranoid about others trying to steal his hard earned stuff. So Morghorl made the decision to hide most of his valuables and stuff them where nobody could find."
-  
-  pro_finger_finisher:0 "Burning The Brutes"
-  pro_finger_finisher_desc:0 "With their tunnels and lairs teeming and the boss hungry for more minerals and territory, it was no surprise when the first mole miners began to trespass into the lands once known as Colorado. With Morghorls hungry eyes upon their wealth, those great rocky mountains will be the next to fall."
-  
-  pro_the_southern_run_2:0 "Mean Miners Mines"
-  pro_the_southern_run_2_desc:0 "The Boss was enraged to learn of the legendary 'Deepmines,' and swore an oath that it would be in Mole Miner hands in no time. How could they be Mole Miners, and not have the deepest mine? He set out to correct this fact as soon as possible."
-  
-  pro_the_wyoming_heirs_2:0 "What's Deep Is Now, Uh, Mine"
-  pro_the_wyoming_heirs_2_desc:0 "The Deepmines were where they belonged: under Mole Miner control. Now, the Boss could live with relative peace knowing his mine was the deepest in all the land."
-  
-  pro_down_with_darkness_2:0 "Showing Em' Real Darkness"
-  pro_down_with_darkness_2_desc:0 "The Boss set his sights on another foe: Battery of Mesa Verde and the men and women of the Black Canyon. Their land was too vast and their influence too great on the western mountains. They had to go, lest the Boss go mad from rage."
-  
-  pro_the_wyoming_heirs_160:0 "Mystery Of The Mountains"
-  pro_the_wyoming_heirs_160_desc:0 "The Miners had heard rumors about some mysterious entrances in the mountains, some old metal doors and vaults in hollow caves. Something the Boss didn't know what to do with, but after a ton of strange folk turned up near the origin of the rumors, the Miners had to take action and investigate."
-  
-  pro_lightning_carriers:0 "Looting The Barons' Stuff"
-  pro_lightning_carriers:0 "With the humans having been overrun by surperior Mole Miner forces, the Baron's lands were ripe for looting and plundering. The few survivors dragged underground and their homes burned to the ground, a great joy for all Miners involved."
-  
-  pro_gods_hammer:0 "Picking A Bone"
-  pro_gods_hammer_desc:0 "The Dry Bones meant nothing to the Boss. He was more interested in the strange, misshapen creatures that emerged from Burham Springs: the Gehenna and the Molech. Though he didn't understand them, he sought to control them as any tyrant would. First, however, he would have to secure their land..."
-  
-  pro_gods_butchers:0 "Horrid Yet Useful"
-  pro_gods_butchers_desc:0 "The wretched creatures from Burham Springs were resistant for a time, but soon the Miners figured out how to weaponize them just as others had, and so the dark armies of Far Son grew in even more horrible ways..."
-  
-  pro_thunder_struck:0 "Nasty Flowers"
-  pro_thunder_struck_desc:0 "Burkham Springs didn't only hold mutated fauna, but also horrid flora. Vines and carnivorous plants grew in the less volcanic parts of the caverns."
-  
-  pro_divine_assistance:0 "The, Erm, Other Miners"
-  pro_divine_assistance_desc:0 "Not all Miners were affected by the bombs the same way, some turned into Mole Miners thanks to their protective suits, but others weren't quite so lucky. The ones without suits survived the intial blasts thanks to the deep mineshafts they worked in, but they then found themselves without food, water, or help. Worse, the lack of air slowly drove them mad. Eventually the hunger made them cannibalise each other and this transformed them into the terrifying monsters that can be found stalking the mines even Mole Miners keep away from."
-  
-  pro_bazin:0 "Ultracite Injections"
-  pro_bazin_desc:0 "The Boss figured that Ultracite was tough stuff, really tough stuff, so putting some of it into their Mining Suits would turn the Miners into really tough guys. Pretty logical."
   
   wyoming_right_opener_pro:0 "Tunnel Rats"
   wyoming_right_opener_pro_desc:0 "Underground you gotta be creative to do combat, good thing the Mole Miners always knew what they were doing down in their tunnels."
@@ -126,10 +66,190 @@
   wyoming_arms_fact_2_pro_desc:0 "The Alton Bourges Mining Suits the Miners used were lacking in many ways, but they were still all the mutated Miners knew. So making their own even shoddier copied versions was useful incase their own ones broke or got destroyed in battle."
   
   wyoming_homeland_idea_pro:0 "Rudimentary Planning"
-  wyoming_homeland_idea_pro_desc:0 "Despite the Boss's big ambitions Mole Miners only had rudamentary intelligence, due to that their tactics were often very simple in nature. This made countering them very easy for the humans, so the mole supervisors decided to come up with some more advanced tactics for their subordinates to follow."
+  wyoming_homeland_idea_pro_desc:0 "Despite the Boss' big ambitions Mole Miners only had rudamentary intelligence, due to that their tactics were often very simple in nature. This made countering them very easy for the humans, so the mole supervisors decided to come up with some more advanced tactics for their subordinates to follow."
   
   wyoming_expansion_idea_pro:0 "Incomprehensible Networks"
   wyoming_expansion_idea_pro_desc:0 "The Miners often dug extra tunnels, well hidden from any human eye, to supply themselves even in desperate situations. That way they never ran out of bullets or food, causing great confusion among their foes."
   
   wyoming_idea_coalesce_pro:0 "Dark As A Dungeon"
   wyoming_idea_coalesce_pro_desc:0 "The Miners of Wyoming had come a long way, their weapons repaired, their suits fully functional, they would make the humans fear the dark, the caves, and all that lied below."
+    
+  ##################################
+  ############# MAIN ###############
+  ##################################
+  
+  pro_wyoming_dominated:0 "Wyoming, Dominated"
+  pro_wyoming_dominated_desc:0 "The Miners didn't take long to move in. How could anyone stop them? The Watch that had so heroically assembled had fallen, despite their best efforts to stem the moletide. Now, the Boss was in charge, yet that wasn't even the worst part. The worst part was that he was dissatisfied."
+  
+  pro_mole_tide:0 "The Mole Tide"
+  pro_mole_tide_desc:0 "The moles ever grew in number, soon the earth itself would shake under their weight. And they made their way towards their neighboring lands."
+  
+  pro_strange_visitors:0 "Flock To Darkness"
+  pro_strange_visitors_desc:0 "Wasn't only moles and beasts who lurked in the dark mountains of wyoming, a strange group of mutants also resided there. Though Morghorl only learned late of this..."
+  
+  pro_hellpit:0 "The Hellpit"
+  pro_hellpit_desc:0 "Rumors of a dangerous and mysterious cave made their rounds in the mountains..."
+  
+  pro_deep_form:0 "Kingdom Of Darkness"
+  pro_deep_form_desc:0 "What did the surface hold that the soil could not provide? Why bother caring about it at all. The miners set their goal of building a great underground empire!"
+  
+  pro_pa_1:0 "Alton Bourges' Secret"
+  pro_pa_1_desc:0 "Alton Bourges had a secret project in development before the war, only some scraps remain of the prototypes, but some miners had managed to find copies of the unfinished blueprints used to make them. This was great news, and it wasn't long until the wasteland learned to fear the strange ironclad miners."
+  
+  pro_pa_2:0 "Excavator Suits"
+  pro_pa_2_desc:0 "Finishing what Alton Bourges never managed, the miners had created their own set of Power Armor. These they would use not only for their intended excavation purpose, but also for combat protection."
+  
+  pro_protectrons:0 "Mechanical Assistance"
+  pro_protectrons_desc:0 "There was a big trouble before the bombs about replacing miners with robots, luckily Far Son was spared the worst of it. Still, the old mines were filled with deactivated robots that the Boss wanted to use for his own purposes."
+  
+  pro_bunker_line:0 "Bunkering Down"
+  pro_bunker_line_desc:0 "With all their new conquest the moles found their old tunnels undermanned and badly maintained. The Boss told them to fix up the supports, make some repairs on the vents and build a ton of defensive positions so any invader wouldn't stand a chance. The moles quietly obeyed."
+  
+  pro_deep_defense:0 "Deep Defense"
+  pro_deep_defense_desc:0 "The homeland of the miners was characterised by many mile long tunnel systems with a layout almost impossible to wrap your head around. These were ideal for defense in case of invasion. Still the Boss, in his infinite wisdom and cunning, ordered purpose-built fighting tunnels to be created where it mattered most."
+  
+  pro_new_far_son:0 "A Home On The Wastes"
+  pro_new_far_son_desc:0 "A change of course was needed, yes the below was their home, but the Boss knew that it would only harm to isolate himself from the world. That way he would give the outsiders time to close in, and grow in strenght. Instead, Far Son would rise above all!"
+  
+  pro_from_below:0 "Morghorl's Means"
+  pro_from_below_desc:0 "Morghorl knew that his future stood in flux, means had to be taken in order to secure his future."
+  
+  pro_nuclear_power:0 "Advanced Extraction"
+  pro_nuclear_power_desc:0 "Nuclear power was useful not only to the old world, but also to the miners of the new one. Ever hungry for resources, they did anything to get their hands on generators or circuits."
+  
+  pro_lonetree:0 "Chopping Wood"
+  pro_lonetree_desc:0 "Lonetree was a perfect choice for the Boss. It would secure a wider berth around the South Pass and Far Son, allowing a longer front to be maintained against the surface dwellers."
+  
+  pro_morghorl_means:0 "From Below"
+  pro_morghorl_means_desc:0 "The moles soon got a nickname for their fighting style 'The Menace from below' is what the humans called their tactics. A fitting name, since they never knew if they stood on solid ground, or if a 5 foot mutant was about to jump 'em from below."
+  
+  pro_jurassic_strength:0 "Superhuman Strength"
+  pro_jurassic_strength_desc:0 "All the digging and slashing did a great number on the physique of the miners. Their strenght was incredible and legendary."
+  
+  pro_rockblasting:0 "Rockblasting"
+  pro_rockblasting_desc:0 "With their new tools the Miners mobilised and armed themselves to the teeth, especially Morghorl was eager to get more loot in his grabbers."
+  
+  pro_boss_big_decision:0 "The Boss' Big Decision"
+  pro_boss_big_decision_desc:0 "The Boss was indecisive, a big decision stood before and he didn't quite know what to do."
+  
+  pro_utah_expansion:0 "West We Shall Go"
+  pro_utah_expansion_desc:0 "To many, Utah is a land of religions and gods vying for souls and land alike. The miners have no gods and no cares for souls, but the Great Salt Lake that lies at the heart of that land calls them nonetheless. A rich source of many minerals and resources, the Boss desires it, and so the miners will go."
+  
+  pro_idaho_expansion:0 "The Northern Glories"
+  pro_idaho_expansion_desc:0 "To the north the Boss turned himself then, towards the homes of relious zealots and their arsenals of weaponry. Hungry for their wealth and craving violence, he whipped the miners into a frenzy and lead the way into old Idaho."
+  
+  pro_colorado_expansion:0 "The East Shall Know Pain"
+  pro_colorado_expansion_desc:0 "With their tunnels and lairs teeming and the Boss hungry for more minerals and territory, it was no surprise when the first mole miners began to trespass into the lands once known as Idaho. With Morghorls hungry eyes upon their wealth, those great rocky mountains will be the next to fall."
+  
+  pro_boss_loot_loot:0 "Loot, Loot And Even More Loot"
+  pro_boss_loot_loot_desc:0 "Morghorl's greed grew and grew, never sated he kept wanting more and more. His underlings plundered the lands far and wide, and nothing would remain the way it was..."
+  
+  pro_drilling:0 "Ruthless Drilling"
+  pro_drilling_desc:0 "Even after extensive shouting lessons, the Foremen of the mine still couldn't keep control over all their troops. They would need to be taught dicipline."
+  
+  pro_supply_vehicle:0 "Big Wheels"
+  pro_supply_vehicle_desc:0 "Big Trucks were very useful to the miners, an easy way to cover ground and move large amounts of soil."
+  
+  pro_horls_secret_stash:0 "Morghorl's Secret Stash"
+  pro_horls_secret_stash_desc:0 "With all the new loot, Morghorl's coffins were bursting, his treasure chamber could hardly hold any more. Even worse, he grew paranoid about others trying to steal his hard earned stuff. So Morghorl made the decision to hide most of his valuables and stuff them where nobody could find."
+  
+  pro_supplies:0 "Stock Up Supplies"
+  pro_supplies_desc:0 "Before any large campaign the miners gathered their supplies in a big distribution centre. From there they would deliver the supplies through their tunnel system to where they were needed the most."
+  
+  pro_hunting_humans:0 "Hunting Humans"
+  pro_hunting_humans_desc:0 "The moles were slow, loud, and not very quick on the draw, but the humans still feared them more than any raider gang or supermutant. Since they were used to operating in complete darkness the Miners usually hunted at night, and no human was safe from them at hunting hour."
+  
+  pro_big_boom:0 "Even More Boom"
+  pro_big_boom_desc:0 "The miners liked Alton Bourges' toys, but sadly those were limited in number so there was always a big need for scavenging anything they could get their hands on. Luckily the Boss, in his infinite cunning, managed to figure out how to break into an old military base and snatch some blueprints from there. With these documents he could get the Miners some really deadly firepower."
+  
+  pro_shoulder_mmg:0 "Less Boom, More Bullet"
+  pro_shoulder_mmg_desc:0 "Explosives were fun and good, but sometimes regular-old bullets also did the trick. The Boss knew this and decided to send out scavengers to bring him new machineguns."
+  
+  pro_lined_ammo:0 "Ultracite-Lined Ammo"
+  pro_lined_ammo_desc:0 "The miners only had sparse amounts of Ultracite. Even in their deepest and darkest mines it was difficult to find any. But the scarcity didn't mean they couldn't employ the stuff they had for useful purposes."
+  
+  pro_airbase:0 "The Threat Above"
+  pro_airbase_desc:0 "Deadly things flew above the surface, Morghorl saw how they dropped bombs and bullets onto the ground. He knew that simply hiding below ground would be stupid, since this technology had great potential."
+  
+  pro_air_tech:0 "Moles With Wings"
+  pro_air_tech_desc:0 "The Boss was all eager and ambitious about this project. Sure it was far from safe for the test pilots, but it didn't matter. The miners would take to the skies and escape the surface world."
+  
+  pro_blimp_power:0 "The Big Blimps"
+  pro_blimp_power_desc:0 "With their new technology, the Boss was far from done with his big projects. A massive undertaking would be done to create large airships that then could rain terror upon Morghorl's enemies."
+  
+  pro_mystery_of_diana:0 "Mystery Of The Mountains"
+  pro_mystery_of_diana_desc:0 "The Miners had heard rumors about some mysterious entrances in the mountains, some old metal doors and vaults in hollow caves. Something the Boss didn't know what to do with, but after a ton of strange folk turned up near the origin of the rumors, the Miners had to take action and investigate."
+  
+  pro_gehenna:0 "Horrid Yet Useful"
+  pro_gehenna_desc:0 "The wretched creatures from Burham Springs were resistant for a time, but soon the Miners figured out how to weaponize them just as others had, and so the dark armies of Far Son grew in even more horrible ways..."
+  
+  pro_deadly_flowers:0 "Nasty Flowers"
+  pro_deadly_flowers_desc:0 "Burkham Springs didn't only hold mutated fauna, but also horrid flora. Vines and carnivorous plants grew in the less volcanic parts of the caverns."
+  
+  pro_big_brother:0 "The, Erm, Other Miners"
+  pro_big_brother_desc:0 "Not all Miners were affected by the bombs the same way, some turned into Mole Miners thanks to their protective suits, but others weren't quite so lucky. The ones without suits survived the intial blasts thanks to the deep mineshafts they worked in, but they then found themselves without food, water, or help. Worse, the lack of air slowly drove them mad. Eventually the hunger made them cannibalise each other and this transformed them into the terrifying monsters that can be found stalking those mines that even Mole Miners keep away from."
+  
+  pro_ultracite_injections:0 "Ultracite Injections"
+  pro_ultracite_injections_desc:0 "The Boss figured that Ultracite was tough stuff, really tough stuff, so putting some of it into their Mining Suits would turn the Miners into really tough guys. Pretty logical."
+  
+  pro_deeper_mines:0 "A Mine Deeper Than Our Own"
+  pro_deeper_mines_desc:0 "The Boss was enraged to learn of the legendary 'Deepmines,' and swore an oath that it would be in Mole Miner hands in no time. How could they be Mole Miners, and not have the deepest mine? He set out to correct this fact as soon as possible."
+  
+  pro_bones_to_rend:0 "Bones To Rend"
+  pro_bones_to_rend_desc:0 "The Dry Bones meant nothing to the Boss. He was more interested in the strange, misshapen creatures that emerged from Burham Springs: the Gehenna and the Molech. Though he didn't understand them, he sought to control them as any tyrant would. First, however, he would have to secure their land..."
+  
+  pro_oroboros:0 "Ending the Cycle"
+  pro_oroboros_desc:0 "The Boss' greatest foe, Ouroboros, stood tall against him: warriors who fought with the night just as he did. That vile woman Hecate and her lacky Jordan Dae had become his greatest nemesis seemingly overnight, and he swore an oath to rend them from the Earth completely."
+  
+  pro_deepest_mines:0 "What's Deep Is Now, Uh, Ours"
+  pro_deepest_mines_desc:0 "The Deepmines were where they belonged: under Mole Miner control. Now, the Boss could live with relative peace knowing his mine was the deepest in all the land."
+  
+  pro_black_canyon:0 "Down With The Darkness"
+  pro_black_canyon_desc:0 "With Rowlings and its surrounding environs now under the control of Far Son, the Boss set his sights on another foe: Battery of Mesa Verde and the men and women of the Black Canyon. Their land was too vast and their influence too great on the western mountains. They had to go, lest the Boss go mad from rage."
+  
+  pro_mini_boom:0 "Atomic Mining Techniques"
+  pro_mini_boom_desc:0 "The Mole Miners do not celebrate their successes but Boss Morghorl could not help but spend the day barking happily after inspecting the newest pile of loot dragged before him. In the center of the heap, buried under an old chryslus was a crate of untouched mini nukes."
+  
+  #SPIRIT FLOCK
+  pro_silent_giant:0 "Silent Giants"
+  pro_silent_giant_desc:0 "Lurking in the heights of the Gannet Spine were a clan of bruise colored brutes, Nightkin, that were convinced to leave their mountain caves and join the beastly horde of Far Son. They added a subtle but still devastating element to the rest of the force’s blunt force approach. Any among them who did not support the notion were surely cowed by Morghorls might."
+  
+  pro_seed_of_faith:0 "A Seed of Faith"
+  pro_seed_of_faith_desc:0 "Among the Nightkin who’d come down from the Spine to march alongside the moles was a particularly strong-willed and charismatic individual who called themself Sister Abraham. She carried with her always a satchel filled with scripture and books from Canaanite missionaries and caravans her clan had either spoken with or eaten, depending on the day. Her two voices grew louder day by day until many of the Nightkin heeded her over all else, and even some miners began to take heed."
+  
+  pro_abraham_and_isaac:0 "Abraham and Isaac"
+  pro_abraham_and_isaac_desc:0 "She came to Morghorl on that day, calling him from his den to stand before the horde. The light that poured from her heart was blinding, a river he could not ford. The angels observed the fray, the shadows burnt away, and the horde found a new way."
+  
+  pro_messenger:0 "A Messenger to her People"
+  pro_messenger_desc:0 "§CThey are confused, lambs adrift rather than a true flock. My kinfolk, the men of the underworld, even the poor little mole ratties. They must be carefully tended to if their spirits are to be saved. §!§RThere is much to be done, hard work will keep their minds from wandering.§!"
+  
+  pro_heavy_burden:0 "The Heavy Burden of Repentance"
+  pro_heavy_burden_desc:0 "§CThough it was not at my own hands, these Watch folk of Rawlins and the Arapaho suffered greatly at the hands of the diabolic child who once led my flock. §RThey are weak§! but those who survive should know of our great sorrow and desire to heal these wounds.§!"
+  
+  pro_many_trees:0 "Many Trees"
+  pro_many_trees_desc:0 "§ROur former mountainous homes lay here, looking over weak and fearful people in need of guidance. Instead they met slaughter and death, at our own ignorant hands! §!§CThey are gone now, the few who survive having wisely fled. It is all ours now, every lonely hill and empty town. We will plant many trees in remembrance.§!"
+  
+  pro_no_david:0 "They Will Have No David"
+  pro_no_david_desc:0 "§CIn the highest peaks, where the scorpions and deathclaws teem in their masses, is the echo of heavy footfalls such as to suggest thunder in the mountains. Those calamitous feet belong to one who is yet a philistine but could be shown the light. §!§RA Goliath he is, one who could champion the cause of the Holy Spirit here and in the beyond. I will go myself to tell him the good news.§!"
+  
+  pro_steam_and_sin:0 "Lands of Steam and Sin"
+  pro_steam_and_sin_desc:0 "§RDeliver us o Spirit, deliver us from the evils of bloody and steaming men, deliver unto us your cunning and strength. The Gate of Heaven lies in the hands of dark and misguided folk, turned away from your light. §!§RThe innocents they lead astray must be saved, and their dripping idols cast down.§!"
+  
+  pro_schism_mending:0 "A Schism to Mend"
+  pro_schism_mending_desc:0 "§CTo the west are faithful people lost to madness and debate. §!§RThey shed blood and bullets all in the name of misunderstood scripture and muddied belief. The best way to mend such a schism is to cauterize the wound with a burning brand §!§Cand soothe the pain with the love of the Holy Spirit. §!§RSuch is the task put before us.§!"
+  
+  pro_holy_spirit:0 "The Holy Spirit"
+  pro_holy_spirit_desc:0 "§CThe Father and his Son are paramount in all things, this is an unarguable truth, but to my own people we find a kinship in the Holy Spirit. Invisible, intangible, oft forgotten and set off to the side. Our creation was intended to mirror this state,§!§R as The Master played god in his hellish pit of darkness! Spreading the word of the Holy Spirit will draw more of our kin, and lend heart to our faithful warriors.§!"
+  
+  pro_quilt_of_faith:0 "A Quilt of Patchwork Faith"
+  pro_quilt_of_faith_desc:0 "§RThere is great difficulty in the road that we walk. Many within our lands do not understand the Father’s teachings as we do, and in fact preach words that contradict our own! §!§CForbearance however is the way, quiet and loving shepherds work. It will take time, but we must try. The rod will only bring rebellion anyway.§!"
+  
+  pro_defilers:0 "Defilers and Devils"
+  pro_defilers_desc:0 "§CCanaan! Canaan! Ai, what has been done to you sweet Canaan? Home of kind teachers and God's faithful children,§!§R you lie in ruin! Those who have washed you in blood are truly devils in the skin of men, and they will be delivered unto the Father’s judgement! Take up your arms my flock, for you are to be the instruments of divine wroth!§!"
+  
+  pro_den_of_thieves:0 "Den of Thieves"
+  pro_den_of_thieves_desc:0 "§RA house of prayer rendered into a house of thieves is a sin most dire. Canaan is poisoned by the iniquity of a corrupt and diseased man, who has lost sight of the faith. It is to us, Canaan’s previously unknown children, to rescue the land from this threat to their souls. §!§CI weep that it has come to this."
+  
+  pro_battle_of_words:0 "Battles of Words Not Bullets"
+  pro_battle_of_words_desc:0 "§RThe humans have not been quick to accept us as spiritual leaders or even equals, and the easing of their sectarian squabbles has not been forthcoming. It is a most frustrating test of my patience §!§Cbut one that must be weathered. We are all people of the book, people of faith and forbearance. It will be best for us all if we may have at these differences with theological debate and save our rancor for those who threaten us all."
+  
