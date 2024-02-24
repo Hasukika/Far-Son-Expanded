@@ -28,6 +28,8 @@ ideas = {
 			modifier = {
 				army_strength_factor = 0.1
 				breakthrough_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05 
+				#production_lack_of_resource_penalty_factor = 0.25 
 				#army_attack_speed_factor = 0.05
 			}
 		}
@@ -55,7 +57,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				truck_attrition_factor = -0.25
+				truck_attrition_factor = -0.1
 			}
 			equipment_bonus = {
 				heavy_motorized_equipment_2 = {
@@ -77,6 +79,7 @@ ideas = {
 				#army_attack_factor = 0.085
 				#army_org_factor = 0.10
 				land_night_attack = 0.2
+				army_attack_factor = -0.05
 				army_attack_speed_factor = 0.05
 			}
 		}
@@ -109,8 +112,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				#army_attack_factor = -0.025
-				initiative_factor = -0.1
-				army_org_factor = 0.1
+				initiative_factor = -0.05
+				army_org_factor = 0.05
 			}
 		}
 		pro_army_stuff_2 = {
@@ -123,8 +126,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				max_command_power = 50
-				max_planning_factor = 0.075
+				max_command_power = -25
+				max_planning_factor = 0.1
 			}
 		}
 		pro_army_stuff_3 = {
@@ -137,8 +140,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				no_supply_grace = 120
-				pocket_penalty = -0.50
+				no_supply_grace = 48
+				pocket_penalty = -0.25
 			}
 		}
 		pro_army_stuff_4 = {
@@ -151,8 +154,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				attrition = -0.15
-				dig_in_speed_factor = 0.5
+				attrition = -0.05
+				dig_in_speed_factor = 0.2
+				required_garrison_factor = 0.05
 			}
 		}
 		wyoming_idea_snake_of_wyoming_1 = {
@@ -165,12 +169,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				attrition = -0.20
-				dig_in_speed_factor = 0.5
-				max_command_power = 75
-				max_planning_factor = 0.01
-				initiative_factor = -0.2
-				army_org_factor = 0.1
+				attrition = -0.05
+				dig_in_speed_factor = 0.25
+				max_command_power = -20
+				max_planning_factor = 0.010
+				initiative_factor = -0.05
+				army_org_factor = 0.05
+				required_garrison_factor = 0.05
 			}
 		}
 		wyoming_idea_snake_of_wyoming_2 = {
@@ -183,12 +188,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				attrition = -0.20
-				dig_in_speed_factor = 0.5
-				no_supply_grace = 200
-				pocket_penalty = -0.75
-				initiative_factor = -0.75
-				army_org_factor = 0.1
+				attrition = -0.05
+				dig_in_speed_factor = 0.25
+				no_supply_grace = 96
+				pocket_penalty = -0.30
+				initiative_factor = -0.05
+				army_org_factor = 0.05
+				required_garrison_factor = 0.05
 			}
 		}
 		#SPIRIT FLOCK
