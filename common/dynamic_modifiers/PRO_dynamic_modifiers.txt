@@ -1,6 +1,6 @@
 PRO_far_son_defense_modifier = {
 	enable = { always = yes }
-	icon = GFX_idea_generic_pickaxe
+	icon = GFX_idea_FRA_fortification_focus
 	
 	army_core_defence_factor = 0.05
 	army_speed_factor_for_controller = 0.15
@@ -26,5 +26,5 @@ PRO_far_son_mine_industry_final = {
 	industry_air_damage_factor = -0.5
 	local_supplies = 0.1
 	local_building_slots = 15
-	production_speed_buildings_factor = 0.2
+	production_speed_buildings_factor = 0.05
 }

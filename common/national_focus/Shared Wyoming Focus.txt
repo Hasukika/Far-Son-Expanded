@@ -1648,6 +1648,10 @@ focus_tree = {
 		relative_position_id = pro_deeper_mines
 		cost = 45
 		available = {
+            DRY = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			owns_state = 217
 		}
 
 		completion_reward = {
